@@ -413,6 +413,7 @@ p {
   <i class="fa fa-close strip__close" style="transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s;"></i>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
 <script>
   var Expand = function () {
   var tile = $('.strips__strip');
@@ -421,10 +422,12 @@ p {
   var stripClose = $('.strip__close');
   var expanded = false;
 
+
+
   var open = function () {
 
     var tile = $(this).parent();
-
+	console.log("::",expanded)
     if (!expanded) {
       tile.addClass('strips__strip--expanded');
       // add delay to inner text
@@ -436,6 +439,7 @@ p {
   };
 
   var close = function () {
+	  console.log(":::",expanded)
     if (expanded) {
       tile.removeClass('strips__strip--expanded');
       // remove delay from inner text
@@ -446,22 +450,40 @@ p {
     }
   };
 
+  var escEvent = function () {
+	  $(document).keydown(function(event) {
+  		if(event.keyCode==27){
+  			close()
+  	    }
+  	});
+  };
+
   var bindActions = function () {
     tileLink.on('click', open);
     stripClose.on('click', close);
+	escEvent();
   };
 
   var init = function () {
     bindActions();
+
   };
 
   return {
     init: init };
 
-
 }();
 
 Expand.init();
+
+// $(document).keydown(function(event) {
+// 	if(event.keyCode==27){
+// 		$('.strips__strip').removeClass('strips__strip--expanded');
+// 		$('.strip__close').removeClass('strip__close--show');
+// 		Expand.
+//     }
+// });
+
 
 </script>
 </body>
