@@ -1,0 +1,74 @@
+<html lang="en" class="">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+
+</head>
+<body>
+	<h1>Flex Menu</h1>
+	<div class="container">
+	  <div class="flex-box"></div>
+	  <div class="flex-box"></div>
+	  <div class="flex-box"></div>
+
+	  <div class="menu">
+	    <ul class="list">
+	      <li class="item">Home</li>
+	      <li class="item">About</li>
+	      <li class="item dropdown-holder dropdown-holder1">
+	        Widgets
+	        <div class="hover-box">
+	          <ul class="hover-box-list">
+	            <li class="hover-box-item">Big Widget</li>
+	            <li class="hover-box-item">Bigger Widgets</li>
+	            <li class="hover-box-item">Huge Widget</li>
+	          </ul>
+	        </div>
+
+	      </li>
+	      <li class="item dropdown-holder">Kabobs
+	        <div class="hover-box">
+	          <ul class="hover-box-list">
+	            <li class="hover-box-item">Shiskabobs</li>
+	            <li class="hover-box-item">BBQ kabobs</li>
+	            <li class="hover-box-item">Summer Kabobs</li>
+	          </ul>
+	        </div>
+
+	      </li>
+	      <li class="item">Contact</li>
+
+	    </ul>
+	  </div>
+
+	  <div class="toggle">
+	    <span></span>
+	    <span></span>
+	    <span></span>
+	  </div>
+
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script>
+	// MUST REFRESH PAGE ON DIFFERENT VIEWPORT FOR HOVER EFFECTS
+
+	if ($(window).width() > 739) {
+	  $(".dropdown-holder").on("mouseenter", function (e) {
+	    $(".hover-box", this).slideDown("fast");
+	    $(".dropdown-holder").on("mouseleave", function (e) {
+	      $(".hover-box", this).slideUp("fast");
+	    });
+	  });
+	}
+
+	  document.querySelector(".toggle").addEventListener("click", function () {
+	  document.querySelector(".container").classList.toggle("open");
+	});
+	//# sourceURL=pen.js
+	</script>
+
+</body>
+</html>

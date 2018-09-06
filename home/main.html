@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+	<meta charset="UTF-8">
+
+
+<style class="cp-pen-styles">* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial;
+  width: 100%;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 60px;
+  background-color: rgba(200,200,200,0.5);
+  color: rgba(25,25,25,0.8);
+  padding: 8px 24px;
+  border-radius: 16px;
+}
+
+div:nth-child(1) {
+  background-image: url(https://res.cloudinary.com/ayre001/image/upload/v1535517078/ai-artificial-intelligence-code-34676.jpg);
+  background-size: cover;
+}
+
+div:nth-child(2) {
+  background: navy;
+}
+
+div:nth-child(3) {
+  background-image: url(https://res.cloudinary.com/ayre001/image/upload/v1535516954/pexels-photo-583842.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+div:nth-child(4) {
+
+}</style>
+</head>
+<body>
+	<div id="parallax" style="background-position-y: 0px;">
+	  <h2>DIV I</h2>
+	</div>
+	<div>
+	  <h2>DIV II</h2>
+	</div>
+	<div>
+		<iframe src="index2.html" style="width:100%;height:100%"></iframe>
+	</div>
+	<div>
+		<iframe src="index3.html" style="width:100%;height:100%"></iframe>
+	</div>
+
+<script>
+const parallax = document.getElementById("parallax");
+
+window.addEventListener("scroll", function () {
+  let offset = window.pageYOffset;
+  parallax.style.backgroundPositionY =
+  offset * 0.7 + "px";
+});
+//# sourceURL=pen.js
+</script>
+</body>
+</html>
