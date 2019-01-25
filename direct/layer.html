@@ -1,0 +1,1169 @@
+<div id="settingTabModal" tabindex="-1" role="dialog" class="modal fade config in" style="display: block;">
+    <div role="document" class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <!---->
+            <div class="modal-header">
+                <div class="col-xs-12" style="padding: 0px;">
+                    <h3>
+                        판매자 톡 상담 설정
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close pull-right"><span
+                                aria-hidden="true">×</span></button></h3>
+                </div>
+            </div>
+            <div class="modal-body text-dark">
+                <ul id="consult-tabs" role="tablist" class="nav nav-pills nav-justified">
+                    <li class="nav-item active"><a href="#default-config" aria-controls="default-config" role="tab"
+                            data-toggle="tab" id="defaultTab" class="nav-link" aria-expanded="true">상담 기본 설정</a></li>
+                    <li class="nav-item"><a href="#greeting-config" aria-controls="greeting-config" role="tab"
+                            data-toggle="tab" class="nav-link separator-both" aria-expanded="false">인사말 설정</a></li>
+                    <li class="nav-item"><a href="#counselor-manage" aria-controls="counselor-manage" role="tab"
+                            data-toggle="tab" class="nav-link" aria-expanded="false">담당자 관리</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="default-config" class="tab-pane active">
+                        <div id="defaultConfig">
+                            <ul class="info">
+                                <li>상담 시간 외 안내 메시지, 부재중 메시지 설정 시 상담불가 일시를 명확히 기재해 주세요.</li>
+                            </ul>
+                            <table class="table table-border-top">
+                                <tr>
+                                    <th class="title">판매자 톡 상담<br>사용 여부</th>
+                                    <td class="content" style="height: 100px;"><strong>현재 판매자 톡 상담을 <span class="text-red"
+                                                style="font-size: 16px;">허용</span>하셨습니다.</strong>
+                                        <div class="description">
+                                            <div class="sub-text">모든 딜에 적용되며, 고객은 판매 종료 1개월까지 상담을 요청할 수 있습니다</div>
+                                        </div>
+                                    </td>
+                                    <td><button class="btn btn-default btn-default-primary">중지</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="separator"></td>
+                                </tr>
+                                <tr>
+                                    <th class="title">요일별 상담가능 시간</th>
+                                    <td class="content" style="height: 235px;">
+                                        <table class="table" style="font-size: 16px; margin: 0px;">
+                                            <colgroup>
+                                                <col width="80">
+                                                <col width="*">
+                                            </colgroup>
+                                            <tr>
+                                                <td><input type="checkbox" id="day1"> <label for="day1" class="form-check-label">평일</label></td>
+                                                <td>
+                                                    <div class="form-inline custom_select_box"><select id="weekdays-startHour"
+                                                            class="date-control select2-hidden-accessible"
+                                                            data-select2-id="weekdays-startHour" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="2">01</option>
+                                                            <option data-select2-id="39">02</option>
+                                                            <option data-select2-id="40">03</option>
+                                                            <option data-select2-id="41">04</option>
+                                                            <option data-select2-id="42">05</option>
+                                                            <option data-select2-id="43">06</option>
+                                                            <option data-select2-id="44">07</option>
+                                                            <option data-select2-id="45">08</option>
+                                                            <option data-select2-id="46">09</option>
+                                                            <option data-select2-id="33">10</option>
+                                                            <option data-select2-id="47">11</option>
+                                                            <option data-select2-id="48">12</option>
+                                                            <option data-select2-id="49">13</option>
+                                                            <option data-select2-id="50">14</option>
+                                                            <option data-select2-id="51">15</option>
+                                                            <option data-select2-id="52">16</option>
+                                                            <option data-select2-id="53">17</option>
+                                                            <option data-select2-id="54">18</option>
+                                                            <option data-select2-id="55">19</option>
+                                                            <option data-select2-id="56">20</option>
+                                                            <option data-select2-id="57">21</option>
+                                                            <option data-select2-id="58">22</option>
+                                                            <option data-select2-id="59">23</option>
+                                                            <option data-select2-id="60">24</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="785" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-weekdays-startHour-container"><span
+                                                                        class="select2-selection__rendered" id="select2-weekdays-startHour-container"
+                                                                        role="textbox" aria-readonly="true" title="10">10</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        시
+                                                        <select id="weekdays-startMinute" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="weekdays-startMinute" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="4">00</option>
+                                                            <option data-select2-id="62">01</option>
+                                                            <option data-select2-id="63">02</option>
+                                                            <option data-select2-id="64">03</option>
+                                                            <option data-select2-id="65">04</option>
+                                                            <option data-select2-id="66">05</option>
+                                                            <option data-select2-id="67">06</option>
+                                                            <option data-select2-id="68">07</option>
+                                                            <option data-select2-id="69">08</option>
+                                                            <option data-select2-id="70">09</option>
+                                                            <option data-select2-id="71">10</option>
+                                                            <option data-select2-id="72">11</option>
+                                                            <option data-select2-id="73">12</option>
+                                                            <option data-select2-id="74">13</option>
+                                                            <option data-select2-id="75">14</option>
+                                                            <option data-select2-id="76">15</option>
+                                                            <option data-select2-id="77">16</option>
+                                                            <option data-select2-id="78">17</option>
+                                                            <option data-select2-id="79">18</option>
+                                                            <option data-select2-id="80">19</option>
+                                                            <option data-select2-id="81">20</option>
+                                                            <option data-select2-id="82">21</option>
+                                                            <option data-select2-id="83">22</option>
+                                                            <option data-select2-id="84">23</option>
+                                                            <option data-select2-id="85">24</option>
+                                                            <option data-select2-id="86">25</option>
+                                                            <option data-select2-id="87">26</option>
+                                                            <option data-select2-id="88">27</option>
+                                                            <option data-select2-id="89">28</option>
+                                                            <option data-select2-id="90">29</option>
+                                                            <option data-select2-id="91">30</option>
+                                                            <option data-select2-id="92">31</option>
+                                                            <option data-select2-id="93">32</option>
+                                                            <option data-select2-id="94">33</option>
+                                                            <option data-select2-id="95">34</option>
+                                                            <option data-select2-id="96">35</option>
+                                                            <option data-select2-id="97">36</option>
+                                                            <option data-select2-id="98">37</option>
+                                                            <option data-select2-id="99">38</option>
+                                                            <option data-select2-id="100">39</option>
+                                                            <option data-select2-id="101">40</option>
+                                                            <option data-select2-id="102">41</option>
+                                                            <option data-select2-id="103">42</option>
+                                                            <option data-select2-id="104">43</option>
+                                                            <option data-select2-id="105">44</option>
+                                                            <option data-select2-id="106">45</option>
+                                                            <option data-select2-id="107">46</option>
+                                                            <option data-select2-id="108">47</option>
+                                                            <option data-select2-id="109">48</option>
+                                                            <option data-select2-id="110">49</option>
+                                                            <option data-select2-id="111">50</option>
+                                                            <option data-select2-id="112">51</option>
+                                                            <option data-select2-id="113">52</option>
+                                                            <option data-select2-id="114">53</option>
+                                                            <option data-select2-id="115">54</option>
+                                                            <option data-select2-id="116">55</option>
+                                                            <option data-select2-id="117">56</option>
+                                                            <option data-select2-id="118">57</option>
+                                                            <option data-select2-id="119">58</option>
+                                                            <option data-select2-id="120">59</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="786" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-weekdays-startMinute-container"><span
+                                                                        class="select2-selection__rendered" id="select2-weekdays-startMinute-container"
+                                                                        role="textbox" aria-readonly="true" title="00">00</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        분 ~
+                                                        <select id="weekdays-endHour" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="weekdays-endHour" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="6">01</option>
+                                                            <option data-select2-id="122">02</option>
+                                                            <option data-select2-id="123">03</option>
+                                                            <option data-select2-id="124">04</option>
+                                                            <option data-select2-id="125">05</option>
+                                                            <option data-select2-id="126">06</option>
+                                                            <option data-select2-id="127">07</option>
+                                                            <option data-select2-id="128">08</option>
+                                                            <option data-select2-id="129">09</option>
+                                                            <option data-select2-id="130">10</option>
+                                                            <option data-select2-id="131">11</option>
+                                                            <option data-select2-id="132">12</option>
+                                                            <option data-select2-id="133">13</option>
+                                                            <option data-select2-id="134">14</option>
+                                                            <option data-select2-id="135">15</option>
+                                                            <option data-select2-id="34">16</option>
+                                                            <option data-select2-id="136">17</option>
+                                                            <option data-select2-id="137">18</option>
+                                                            <option data-select2-id="138">19</option>
+                                                            <option data-select2-id="139">20</option>
+                                                            <option data-select2-id="140">21</option>
+                                                            <option data-select2-id="141">22</option>
+                                                            <option data-select2-id="142">23</option>
+                                                            <option data-select2-id="143">24</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="787" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-weekdays-endHour-container"><span
+                                                                        class="select2-selection__rendered" id="select2-weekdays-endHour-container"
+                                                                        role="textbox" aria-readonly="true" title="16">16</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        시
+                                                        <select id="weekdays-endMinute" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="weekdays-endMinute" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="8">00</option>
+                                                            <option data-select2-id="145">01</option>
+                                                            <option data-select2-id="146">02</option>
+                                                            <option data-select2-id="147">03</option>
+                                                            <option data-select2-id="148">04</option>
+                                                            <option data-select2-id="149">05</option>
+                                                            <option data-select2-id="150">06</option>
+                                                            <option data-select2-id="151">07</option>
+                                                            <option data-select2-id="152">08</option>
+                                                            <option data-select2-id="153">09</option>
+                                                            <option data-select2-id="154">10</option>
+                                                            <option data-select2-id="155">11</option>
+                                                            <option data-select2-id="156">12</option>
+                                                            <option data-select2-id="157">13</option>
+                                                            <option data-select2-id="158">14</option>
+                                                            <option data-select2-id="159">15</option>
+                                                            <option data-select2-id="160">16</option>
+                                                            <option data-select2-id="161">17</option>
+                                                            <option data-select2-id="162">18</option>
+                                                            <option data-select2-id="163">19</option>
+                                                            <option data-select2-id="164">20</option>
+                                                            <option data-select2-id="165">21</option>
+                                                            <option data-select2-id="166">22</option>
+                                                            <option data-select2-id="167">23</option>
+                                                            <option data-select2-id="168">24</option>
+                                                            <option data-select2-id="169">25</option>
+                                                            <option data-select2-id="170">26</option>
+                                                            <option data-select2-id="171">27</option>
+                                                            <option data-select2-id="172">28</option>
+                                                            <option data-select2-id="173">29</option>
+                                                            <option data-select2-id="174">30</option>
+                                                            <option data-select2-id="175">31</option>
+                                                            <option data-select2-id="176">32</option>
+                                                            <option data-select2-id="177">33</option>
+                                                            <option data-select2-id="178">34</option>
+                                                            <option data-select2-id="179">35</option>
+                                                            <option data-select2-id="180">36</option>
+                                                            <option data-select2-id="181">37</option>
+                                                            <option data-select2-id="182">38</option>
+                                                            <option data-select2-id="183">39</option>
+                                                            <option data-select2-id="184">40</option>
+                                                            <option data-select2-id="185">41</option>
+                                                            <option data-select2-id="186">42</option>
+                                                            <option data-select2-id="187">43</option>
+                                                            <option data-select2-id="188">44</option>
+                                                            <option data-select2-id="189">45</option>
+                                                            <option data-select2-id="190">46</option>
+                                                            <option data-select2-id="191">47</option>
+                                                            <option data-select2-id="192">48</option>
+                                                            <option data-select2-id="193">49</option>
+                                                            <option data-select2-id="194">50</option>
+                                                            <option data-select2-id="195">51</option>
+                                                            <option data-select2-id="196">52</option>
+                                                            <option data-select2-id="197">53</option>
+                                                            <option data-select2-id="198">54</option>
+                                                            <option data-select2-id="199">55</option>
+                                                            <option data-select2-id="200">56</option>
+                                                            <option data-select2-id="201">57</option>
+                                                            <option data-select2-id="202">58</option>
+                                                            <option data-select2-id="203">59</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="788" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-weekdays-endMinute-container"><span
+                                                                        class="select2-selection__rendered" id="select2-weekdays-endMinute-container"
+                                                                        role="textbox" aria-readonly="true" title="00">00</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        분
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="height: 10px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="day2"> <label for="day2" class="form-check-label">토요일</label></td>
+                                                <td>
+                                                    <div class="form-inline"><select id="saturday-startHour" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="saturday-startHour" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="10">01</option>
+                                                            <option data-select2-id="205">02</option>
+                                                            <option data-select2-id="206">03</option>
+                                                            <option data-select2-id="207">04</option>
+                                                            <option data-select2-id="208">05</option>
+                                                            <option data-select2-id="209">06</option>
+                                                            <option data-select2-id="210">07</option>
+                                                            <option data-select2-id="211">08</option>
+                                                            <option data-select2-id="35">09</option>
+                                                            <option data-select2-id="212">10</option>
+                                                            <option data-select2-id="213">11</option>
+                                                            <option data-select2-id="214">12</option>
+                                                            <option data-select2-id="215">13</option>
+                                                            <option data-select2-id="216">14</option>
+                                                            <option data-select2-id="217">15</option>
+                                                            <option data-select2-id="218">16</option>
+                                                            <option data-select2-id="219">17</option>
+                                                            <option data-select2-id="220">18</option>
+                                                            <option data-select2-id="221">19</option>
+                                                            <option data-select2-id="222">20</option>
+                                                            <option data-select2-id="223">21</option>
+                                                            <option data-select2-id="224">22</option>
+                                                            <option data-select2-id="225">23</option>
+                                                            <option data-select2-id="226">24</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="789" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-saturday-startHour-container"><span
+                                                                        class="select2-selection__rendered" id="select2-saturday-startHour-container"
+                                                                        role="textbox" aria-readonly="true" title="09">09</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        시
+                                                        <select id="saturday-startMinute" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="saturday-startMinute" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="12">00</option>
+                                                            <option data-select2-id="228">01</option>
+                                                            <option data-select2-id="229">02</option>
+                                                            <option data-select2-id="230">03</option>
+                                                            <option data-select2-id="231">04</option>
+                                                            <option data-select2-id="232">05</option>
+                                                            <option data-select2-id="233">06</option>
+                                                            <option data-select2-id="234">07</option>
+                                                            <option data-select2-id="235">08</option>
+                                                            <option data-select2-id="236">09</option>
+                                                            <option data-select2-id="237">10</option>
+                                                            <option data-select2-id="238">11</option>
+                                                            <option data-select2-id="239">12</option>
+                                                            <option data-select2-id="240">13</option>
+                                                            <option data-select2-id="241">14</option>
+                                                            <option data-select2-id="242">15</option>
+                                                            <option data-select2-id="243">16</option>
+                                                            <option data-select2-id="244">17</option>
+                                                            <option data-select2-id="245">18</option>
+                                                            <option data-select2-id="246">19</option>
+                                                            <option data-select2-id="247">20</option>
+                                                            <option data-select2-id="248">21</option>
+                                                            <option data-select2-id="249">22</option>
+                                                            <option data-select2-id="250">23</option>
+                                                            <option data-select2-id="251">24</option>
+                                                            <option data-select2-id="252">25</option>
+                                                            <option data-select2-id="253">26</option>
+                                                            <option data-select2-id="254">27</option>
+                                                            <option data-select2-id="255">28</option>
+                                                            <option data-select2-id="256">29</option>
+                                                            <option data-select2-id="257">30</option>
+                                                            <option data-select2-id="258">31</option>
+                                                            <option data-select2-id="259">32</option>
+                                                            <option data-select2-id="260">33</option>
+                                                            <option data-select2-id="261">34</option>
+                                                            <option data-select2-id="262">35</option>
+                                                            <option data-select2-id="263">36</option>
+                                                            <option data-select2-id="264">37</option>
+                                                            <option data-select2-id="265">38</option>
+                                                            <option data-select2-id="266">39</option>
+                                                            <option data-select2-id="267">40</option>
+                                                            <option data-select2-id="268">41</option>
+                                                            <option data-select2-id="269">42</option>
+                                                            <option data-select2-id="270">43</option>
+                                                            <option data-select2-id="271">44</option>
+                                                            <option data-select2-id="272">45</option>
+                                                            <option data-select2-id="273">46</option>
+                                                            <option data-select2-id="274">47</option>
+                                                            <option data-select2-id="275">48</option>
+                                                            <option data-select2-id="276">49</option>
+                                                            <option data-select2-id="277">50</option>
+                                                            <option data-select2-id="278">51</option>
+                                                            <option data-select2-id="279">52</option>
+                                                            <option data-select2-id="280">53</option>
+                                                            <option data-select2-id="281">54</option>
+                                                            <option data-select2-id="282">55</option>
+                                                            <option data-select2-id="283">56</option>
+                                                            <option data-select2-id="284">57</option>
+                                                            <option data-select2-id="285">58</option>
+                                                            <option data-select2-id="286">59</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="790" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-saturday-startMinute-container"><span
+                                                                        class="select2-selection__rendered" id="select2-saturday-startMinute-container"
+                                                                        role="textbox" aria-readonly="true" title="00">00</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        분 ~
+                                                        <select id="saturday-endHour" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="saturday-endHour" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="14">01</option>
+                                                            <option data-select2-id="288">02</option>
+                                                            <option data-select2-id="289">03</option>
+                                                            <option data-select2-id="290">04</option>
+                                                            <option data-select2-id="291">05</option>
+                                                            <option data-select2-id="292">06</option>
+                                                            <option data-select2-id="293">07</option>
+                                                            <option data-select2-id="294">08</option>
+                                                            <option data-select2-id="295">09</option>
+                                                            <option data-select2-id="296">10</option>
+                                                            <option data-select2-id="297">11</option>
+                                                            <option data-select2-id="298">12</option>
+                                                            <option data-select2-id="299">13</option>
+                                                            <option data-select2-id="300">14</option>
+                                                            <option data-select2-id="301">15</option>
+                                                            <option data-select2-id="302">16</option>
+                                                            <option data-select2-id="303">17</option>
+                                                            <option data-select2-id="304">18</option>
+                                                            <option data-select2-id="305">19</option>
+                                                            <option data-select2-id="36">20</option>
+                                                            <option data-select2-id="306">21</option>
+                                                            <option data-select2-id="307">22</option>
+                                                            <option data-select2-id="308">23</option>
+                                                            <option data-select2-id="309">24</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="791" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-saturday-endHour-container"><span
+                                                                        class="select2-selection__rendered" id="select2-saturday-endHour-container"
+                                                                        role="textbox" aria-readonly="true" title="20">20</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        시
+                                                        <select id="saturday-endMinute" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="saturday-endMinute" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="16">00</option>
+                                                            <option data-select2-id="311">01</option>
+                                                            <option data-select2-id="312">02</option>
+                                                            <option data-select2-id="313">03</option>
+                                                            <option data-select2-id="314">04</option>
+                                                            <option data-select2-id="315">05</option>
+                                                            <option data-select2-id="316">06</option>
+                                                            <option data-select2-id="317">07</option>
+                                                            <option data-select2-id="318">08</option>
+                                                            <option data-select2-id="319">09</option>
+                                                            <option data-select2-id="320">10</option>
+                                                            <option data-select2-id="321">11</option>
+                                                            <option data-select2-id="322">12</option>
+                                                            <option data-select2-id="323">13</option>
+                                                            <option data-select2-id="324">14</option>
+                                                            <option data-select2-id="325">15</option>
+                                                            <option data-select2-id="326">16</option>
+                                                            <option data-select2-id="327">17</option>
+                                                            <option data-select2-id="328">18</option>
+                                                            <option data-select2-id="329">19</option>
+                                                            <option data-select2-id="330">20</option>
+                                                            <option data-select2-id="331">21</option>
+                                                            <option data-select2-id="332">22</option>
+                                                            <option data-select2-id="333">23</option>
+                                                            <option data-select2-id="334">24</option>
+                                                            <option data-select2-id="335">25</option>
+                                                            <option data-select2-id="336">26</option>
+                                                            <option data-select2-id="337">27</option>
+                                                            <option data-select2-id="338">28</option>
+                                                            <option data-select2-id="339">29</option>
+                                                            <option data-select2-id="340">30</option>
+                                                            <option data-select2-id="341">31</option>
+                                                            <option data-select2-id="342">32</option>
+                                                            <option data-select2-id="343">33</option>
+                                                            <option data-select2-id="344">34</option>
+                                                            <option data-select2-id="345">35</option>
+                                                            <option data-select2-id="346">36</option>
+                                                            <option data-select2-id="347">37</option>
+                                                            <option data-select2-id="348">38</option>
+                                                            <option data-select2-id="349">39</option>
+                                                            <option data-select2-id="350">40</option>
+                                                            <option data-select2-id="351">41</option>
+                                                            <option data-select2-id="352">42</option>
+                                                            <option data-select2-id="353">43</option>
+                                                            <option data-select2-id="354">44</option>
+                                                            <option data-select2-id="355">45</option>
+                                                            <option data-select2-id="356">46</option>
+                                                            <option data-select2-id="357">47</option>
+                                                            <option data-select2-id="358">48</option>
+                                                            <option data-select2-id="359">49</option>
+                                                            <option data-select2-id="360">50</option>
+                                                            <option data-select2-id="361">51</option>
+                                                            <option data-select2-id="362">52</option>
+                                                            <option data-select2-id="363">53</option>
+                                                            <option data-select2-id="364">54</option>
+                                                            <option data-select2-id="365">55</option>
+                                                            <option data-select2-id="366">56</option>
+                                                            <option data-select2-id="367">57</option>
+                                                            <option data-select2-id="368">58</option>
+                                                            <option data-select2-id="369">59</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="792" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-saturday-endMinute-container"><span
+                                                                        class="select2-selection__rendered" id="select2-saturday-endMinute-container"
+                                                                        role="textbox" aria-readonly="true" title="00">00</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        분
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="height: 10px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="day3"> <label for="day3" class="form-check-label">일요일</label></td>
+                                                <td>
+                                                    <div class="form-inline"><select id="sunday-startHour" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="sunday-startHour" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="18">01</option>
+                                                            <option data-select2-id="371">02</option>
+                                                            <option data-select2-id="372">03</option>
+                                                            <option data-select2-id="373">04</option>
+                                                            <option data-select2-id="374">05</option>
+                                                            <option data-select2-id="375">06</option>
+                                                            <option data-select2-id="376">07</option>
+                                                            <option data-select2-id="377">08</option>
+                                                            <option data-select2-id="37">09</option>
+                                                            <option data-select2-id="378">10</option>
+                                                            <option data-select2-id="379">11</option>
+                                                            <option data-select2-id="380">12</option>
+                                                            <option data-select2-id="381">13</option>
+                                                            <option data-select2-id="382">14</option>
+                                                            <option data-select2-id="383">15</option>
+                                                            <option data-select2-id="384">16</option>
+                                                            <option data-select2-id="385">17</option>
+                                                            <option data-select2-id="386">18</option>
+                                                            <option data-select2-id="387">19</option>
+                                                            <option data-select2-id="388">20</option>
+                                                            <option data-select2-id="389">21</option>
+                                                            <option data-select2-id="390">22</option>
+                                                            <option data-select2-id="391">23</option>
+                                                            <option data-select2-id="392">24</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="793" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-sunday-startHour-container"><span
+                                                                        class="select2-selection__rendered" id="select2-sunday-startHour-container"
+                                                                        role="textbox" aria-readonly="true" title="09">09</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        시
+                                                        <select id="sunday-startMinute" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="sunday-startMinute" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="20">00</option>
+                                                            <option data-select2-id="394">01</option>
+                                                            <option data-select2-id="395">02</option>
+                                                            <option data-select2-id="396">03</option>
+                                                            <option data-select2-id="397">04</option>
+                                                            <option data-select2-id="398">05</option>
+                                                            <option data-select2-id="399">06</option>
+                                                            <option data-select2-id="400">07</option>
+                                                            <option data-select2-id="401">08</option>
+                                                            <option data-select2-id="402">09</option>
+                                                            <option data-select2-id="403">10</option>
+                                                            <option data-select2-id="404">11</option>
+                                                            <option data-select2-id="405">12</option>
+                                                            <option data-select2-id="406">13</option>
+                                                            <option data-select2-id="407">14</option>
+                                                            <option data-select2-id="408">15</option>
+                                                            <option data-select2-id="409">16</option>
+                                                            <option data-select2-id="410">17</option>
+                                                            <option data-select2-id="411">18</option>
+                                                            <option data-select2-id="412">19</option>
+                                                            <option data-select2-id="413">20</option>
+                                                            <option data-select2-id="414">21</option>
+                                                            <option data-select2-id="415">22</option>
+                                                            <option data-select2-id="416">23</option>
+                                                            <option data-select2-id="417">24</option>
+                                                            <option data-select2-id="418">25</option>
+                                                            <option data-select2-id="419">26</option>
+                                                            <option data-select2-id="420">27</option>
+                                                            <option data-select2-id="421">28</option>
+                                                            <option data-select2-id="422">29</option>
+                                                            <option data-select2-id="423">30</option>
+                                                            <option data-select2-id="424">31</option>
+                                                            <option data-select2-id="425">32</option>
+                                                            <option data-select2-id="426">33</option>
+                                                            <option data-select2-id="427">34</option>
+                                                            <option data-select2-id="428">35</option>
+                                                            <option data-select2-id="429">36</option>
+                                                            <option data-select2-id="430">37</option>
+                                                            <option data-select2-id="431">38</option>
+                                                            <option data-select2-id="432">39</option>
+                                                            <option data-select2-id="433">40</option>
+                                                            <option data-select2-id="434">41</option>
+                                                            <option data-select2-id="435">42</option>
+                                                            <option data-select2-id="436">43</option>
+                                                            <option data-select2-id="437">44</option>
+                                                            <option data-select2-id="438">45</option>
+                                                            <option data-select2-id="439">46</option>
+                                                            <option data-select2-id="440">47</option>
+                                                            <option data-select2-id="441">48</option>
+                                                            <option data-select2-id="442">49</option>
+                                                            <option data-select2-id="443">50</option>
+                                                            <option data-select2-id="444">51</option>
+                                                            <option data-select2-id="445">52</option>
+                                                            <option data-select2-id="446">53</option>
+                                                            <option data-select2-id="447">54</option>
+                                                            <option data-select2-id="448">55</option>
+                                                            <option data-select2-id="449">56</option>
+                                                            <option data-select2-id="450">57</option>
+                                                            <option data-select2-id="451">58</option>
+                                                            <option data-select2-id="452">59</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="794" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-sunday-startMinute-container"><span
+                                                                        class="select2-selection__rendered" id="select2-sunday-startMinute-container"
+                                                                        role="textbox" aria-readonly="true" title="00">00</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        분 ~
+                                                        <select id="sunday-endHour" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="sunday-endHour" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="22">01</option>
+                                                            <option data-select2-id="454">02</option>
+                                                            <option data-select2-id="455">03</option>
+                                                            <option data-select2-id="456">04</option>
+                                                            <option data-select2-id="457">05</option>
+                                                            <option data-select2-id="458">06</option>
+                                                            <option data-select2-id="459">07</option>
+                                                            <option data-select2-id="460">08</option>
+                                                            <option data-select2-id="461">09</option>
+                                                            <option data-select2-id="462">10</option>
+                                                            <option data-select2-id="463">11</option>
+                                                            <option data-select2-id="464">12</option>
+                                                            <option data-select2-id="465">13</option>
+                                                            <option data-select2-id="466">14</option>
+                                                            <option data-select2-id="467">15</option>
+                                                            <option data-select2-id="468">16</option>
+                                                            <option data-select2-id="469">17</option>
+                                                            <option data-select2-id="470">18</option>
+                                                            <option data-select2-id="471">19</option>
+                                                            <option data-select2-id="38">20</option>
+                                                            <option data-select2-id="472">21</option>
+                                                            <option data-select2-id="473">22</option>
+                                                            <option data-select2-id="474">23</option>
+                                                            <option data-select2-id="475">24</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="795" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-sunday-endHour-container"><span
+                                                                        class="select2-selection__rendered" id="select2-sunday-endHour-container"
+                                                                        role="textbox" aria-readonly="true" title="20">20</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        시
+                                                        <select id="sunday-endMinute" class="date-control select2-hidden-accessible"
+                                                            data-select2-id="sunday-endMinute" tabindex="-1" style="width: 50px;"
+                                                            aria-hidden="true">
+                                                            <option data-select2-id="24">00</option>
+                                                            <option data-select2-id="477">01</option>
+                                                            <option data-select2-id="478">02</option>
+                                                            <option data-select2-id="479">03</option>
+                                                            <option data-select2-id="480">04</option>
+                                                            <option data-select2-id="481">05</option>
+                                                            <option data-select2-id="482">06</option>
+                                                            <option data-select2-id="483">07</option>
+                                                            <option data-select2-id="484">08</option>
+                                                            <option data-select2-id="485">09</option>
+                                                            <option data-select2-id="486">10</option>
+                                                            <option data-select2-id="487">11</option>
+                                                            <option data-select2-id="488">12</option>
+                                                            <option data-select2-id="489">13</option>
+                                                            <option data-select2-id="490">14</option>
+                                                            <option data-select2-id="491">15</option>
+                                                            <option data-select2-id="492">16</option>
+                                                            <option data-select2-id="493">17</option>
+                                                            <option data-select2-id="494">18</option>
+                                                            <option data-select2-id="495">19</option>
+                                                            <option data-select2-id="496">20</option>
+                                                            <option data-select2-id="497">21</option>
+                                                            <option data-select2-id="498">22</option>
+                                                            <option data-select2-id="499">23</option>
+                                                            <option data-select2-id="500">24</option>
+                                                            <option data-select2-id="501">25</option>
+                                                            <option data-select2-id="502">26</option>
+                                                            <option data-select2-id="503">27</option>
+                                                            <option data-select2-id="504">28</option>
+                                                            <option data-select2-id="505">29</option>
+                                                            <option data-select2-id="506">30</option>
+                                                            <option data-select2-id="507">31</option>
+                                                            <option data-select2-id="508">32</option>
+                                                            <option data-select2-id="509">33</option>
+                                                            <option data-select2-id="510">34</option>
+                                                            <option data-select2-id="511">35</option>
+                                                            <option data-select2-id="512">36</option>
+                                                            <option data-select2-id="513">37</option>
+                                                            <option data-select2-id="514">38</option>
+                                                            <option data-select2-id="515">39</option>
+                                                            <option data-select2-id="516">40</option>
+                                                            <option data-select2-id="517">41</option>
+                                                            <option data-select2-id="518">42</option>
+                                                            <option data-select2-id="519">43</option>
+                                                            <option data-select2-id="520">44</option>
+                                                            <option data-select2-id="521">45</option>
+                                                            <option data-select2-id="522">46</option>
+                                                            <option data-select2-id="523">47</option>
+                                                            <option data-select2-id="524">48</option>
+                                                            <option data-select2-id="525">49</option>
+                                                            <option data-select2-id="526">50</option>
+                                                            <option data-select2-id="527">51</option>
+                                                            <option data-select2-id="528">52</option>
+                                                            <option data-select2-id="529">53</option>
+                                                            <option data-select2-id="530">54</option>
+                                                            <option data-select2-id="531">55</option>
+                                                            <option data-select2-id="532">56</option>
+                                                            <option data-select2-id="533">57</option>
+                                                            <option data-select2-id="534">58</option>
+                                                            <option data-select2-id="535">59</option>
+                                                        </select><span class="select2 select2-container select2-container--default"
+                                                            dir="ltr" data-select2-id="796" style="width: 50px;"><span
+                                                                class="selection"><span class="select2-selection select2-selection--single"
+                                                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                                    tabindex="0" aria-labelledby="select2-sunday-endMinute-container"><span
+                                                                        class="select2-selection__rendered" id="select2-sunday-endMinute-container"
+                                                                        role="textbox" aria-readonly="true" title="00">00</span><span
+                                                                        class="select2-selection__arrow" role="presentation"><b
+                                                                            role="presentation"></b></span></span></span><span
+                                                                class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        분
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="description">
+                                            <div>설정된 상담 시간 외에도 고객은 상담을 요청할 수 있으며, 상담시간 외 메시지가 발송됩니다.</div>
+                                            <div class="sub-text">공휴일은 일요일에 준하여 운영됩니다.</div>
+                                        </div>
+                                    </td>
+                                    <td><button class="btn btn-default btn-primary">저장</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="separator"></td>
+                                </tr>
+                                <tr>
+                                    <th class="title">부재 시간</th>
+                                    <td class="content" style="height: 147px;">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <div id="beginStopCounselDatetime" class="input-group" style="width: 130px;"><input
+                                                        type="text" class="form-control input-sm"> <span class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-calendar"></span></span></div>
+                                            </div> <select id="absenceData-startHour" class="date-control select2-hidden-accessible"
+                                                data-select2-id="absenceData-startHour" tabindex="-1" style="width: 50px;"
+                                                aria-hidden="true">
+                                                <option data-select2-id="26">01</option>
+                                                <option data-select2-id="537">02</option>
+                                                <option data-select2-id="538">03</option>
+                                                <option data-select2-id="539">04</option>
+                                                <option data-select2-id="540">05</option>
+                                                <option data-select2-id="541">06</option>
+                                                <option data-select2-id="542">07</option>
+                                                <option data-select2-id="543">08</option>
+                                                <option data-select2-id="544">09</option>
+                                                <option data-select2-id="545">10</option>
+                                                <option data-select2-id="546">11</option>
+                                                <option data-select2-id="547">12</option>
+                                                <option data-select2-id="548">13</option>
+                                                <option data-select2-id="549">14</option>
+                                                <option data-select2-id="550">15</option>
+                                                <option data-select2-id="551">16</option>
+                                                <option data-select2-id="552">17</option>
+                                                <option data-select2-id="553">18</option>
+                                                <option data-select2-id="554">19</option>
+                                                <option data-select2-id="555">20</option>
+                                                <option data-select2-id="556">21</option>
+                                                <option data-select2-id="557">22</option>
+                                                <option data-select2-id="558">23</option>
+                                                <option data-select2-id="559">24</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                dir="ltr" data-select2-id="797" style="width: 50px;"><span class="selection"><span
+                                                        class="select2-selection select2-selection--single" role="combobox"
+                                                        aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                        aria-labelledby="select2-absenceData-startHour-container"><span
+                                                            class="select2-selection__rendered" id="select2-absenceData-startHour-container"
+                                                            role="textbox" aria-readonly="true" title="10">10</span><span
+                                                            class="select2-selection__arrow" role="presentation"><b
+                                                                role="presentation"></b></span></span></span><span
+                                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            시
+                                            <select id="absenceData-startMinute" class="date-control select2-hidden-accessible"
+                                                data-select2-id="absenceData-startMinute" tabindex="-1" style="width: 50px;"
+                                                aria-hidden="true">
+                                                <option data-select2-id="28">00</option>
+                                                <option data-select2-id="561">01</option>
+                                                <option data-select2-id="562">02</option>
+                                                <option data-select2-id="563">03</option>
+                                                <option data-select2-id="564">04</option>
+                                                <option data-select2-id="565">05</option>
+                                                <option data-select2-id="566">06</option>
+                                                <option data-select2-id="567">07</option>
+                                                <option data-select2-id="568">08</option>
+                                                <option data-select2-id="569">09</option>
+                                                <option data-select2-id="570">10</option>
+                                                <option data-select2-id="571">11</option>
+                                                <option data-select2-id="572">12</option>
+                                                <option data-select2-id="573">13</option>
+                                                <option data-select2-id="574">14</option>
+                                                <option data-select2-id="575">15</option>
+                                                <option data-select2-id="576">16</option>
+                                                <option data-select2-id="577">17</option>
+                                                <option data-select2-id="578">18</option>
+                                                <option data-select2-id="579">19</option>
+                                                <option data-select2-id="580">20</option>
+                                                <option data-select2-id="581">21</option>
+                                                <option data-select2-id="582">22</option>
+                                                <option data-select2-id="583">23</option>
+                                                <option data-select2-id="584">24</option>
+                                                <option data-select2-id="585">25</option>
+                                                <option data-select2-id="586">26</option>
+                                                <option data-select2-id="587">27</option>
+                                                <option data-select2-id="588">28</option>
+                                                <option data-select2-id="589">29</option>
+                                                <option data-select2-id="590">30</option>
+                                                <option data-select2-id="591">31</option>
+                                                <option data-select2-id="592">32</option>
+                                                <option data-select2-id="593">33</option>
+                                                <option data-select2-id="594">34</option>
+                                                <option data-select2-id="595">35</option>
+                                                <option data-select2-id="596">36</option>
+                                                <option data-select2-id="597">37</option>
+                                                <option data-select2-id="598">38</option>
+                                                <option data-select2-id="599">39</option>
+                                                <option data-select2-id="600">40</option>
+                                                <option data-select2-id="601">41</option>
+                                                <option data-select2-id="602">42</option>
+                                                <option data-select2-id="603">43</option>
+                                                <option data-select2-id="604">44</option>
+                                                <option data-select2-id="605">45</option>
+                                                <option data-select2-id="606">46</option>
+                                                <option data-select2-id="607">47</option>
+                                                <option data-select2-id="608">48</option>
+                                                <option data-select2-id="609">49</option>
+                                                <option data-select2-id="610">50</option>
+                                                <option data-select2-id="611">51</option>
+                                                <option data-select2-id="612">52</option>
+                                                <option data-select2-id="613">53</option>
+                                                <option data-select2-id="614">54</option>
+                                                <option data-select2-id="615">55</option>
+                                                <option data-select2-id="616">56</option>
+                                                <option data-select2-id="617">57</option>
+                                                <option data-select2-id="618">58</option>
+                                                <option data-select2-id="619">59</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                dir="ltr" data-select2-id="798" style="width: 50px;"><span class="selection"><span
+                                                        class="select2-selection select2-selection--single" role="combobox"
+                                                        aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                        aria-labelledby="select2-absenceData-startMinute-container"><span
+                                                            class="select2-selection__rendered" id="select2-absenceData-startMinute-container"
+                                                            role="textbox" aria-readonly="true" title="30">30</span><span
+                                                            class="select2-selection__arrow" role="presentation"><b
+                                                                role="presentation"></b></span></span></span><span
+                                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            분
+                                            ~
+                                            <div class="form-group">
+                                                <div id="endStopCounselDatetime" class="input-group" style="width: 130px;"><input
+                                                        type="text" class="form-control input-sm"> <span class="input-group-addon"><span
+                                                            class="glyphicon glyphicon-calendar"></span></span></div>
+                                            </div> <select id="absenceData-endHour" class="date-control select2-hidden-accessible"
+                                                data-select2-id="absenceData-endHour" tabindex="-1" style="width: 50px;"
+                                                aria-hidden="true">
+                                                <option data-select2-id="30">01</option>
+                                                <option data-select2-id="621">02</option>
+                                                <option data-select2-id="622">03</option>
+                                                <option data-select2-id="623">04</option>
+                                                <option data-select2-id="624">05</option>
+                                                <option data-select2-id="625">06</option>
+                                                <option data-select2-id="626">07</option>
+                                                <option data-select2-id="627">08</option>
+                                                <option data-select2-id="628">09</option>
+                                                <option data-select2-id="629">10</option>
+                                                <option data-select2-id="630">11</option>
+                                                <option data-select2-id="631">12</option>
+                                                <option data-select2-id="632">13</option>
+                                                <option data-select2-id="633">14</option>
+                                                <option data-select2-id="634">15</option>
+                                                <option data-select2-id="635">16</option>
+                                                <option data-select2-id="636">17</option>
+                                                <option data-select2-id="637">18</option>
+                                                <option data-select2-id="638">19</option>
+                                                <option data-select2-id="639">20</option>
+                                                <option data-select2-id="640">21</option>
+                                                <option data-select2-id="641">22</option>
+                                                <option data-select2-id="642">23</option>
+                                                <option data-select2-id="643">24</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                dir="ltr" data-select2-id="799" style="width: 50px;"><span class="selection"><span
+                                                        class="select2-selection select2-selection--single" role="combobox"
+                                                        aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                        aria-labelledby="select2-absenceData-endHour-container"><span
+                                                            class="select2-selection__rendered" id="select2-absenceData-endHour-container"
+                                                            role="textbox" aria-readonly="true" title="20">20</span><span
+                                                            class="select2-selection__arrow" role="presentation"><b
+                                                                role="presentation"></b></span></span></span><span
+                                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            시
+                                            <select id="absenceData-endMinute" class="date-control select2-hidden-accessible"
+                                                data-select2-id="absenceData-endMinute" tabindex="-1" style="width: 50px;"
+                                                aria-hidden="true">
+                                                <option data-select2-id="32">00</option>
+                                                <option data-select2-id="645">01</option>
+                                                <option data-select2-id="646">02</option>
+                                                <option data-select2-id="647">03</option>
+                                                <option data-select2-id="648">04</option>
+                                                <option data-select2-id="649">05</option>
+                                                <option data-select2-id="650">06</option>
+                                                <option data-select2-id="651">07</option>
+                                                <option data-select2-id="652">08</option>
+                                                <option data-select2-id="653">09</option>
+                                                <option data-select2-id="654">10</option>
+                                                <option data-select2-id="655">11</option>
+                                                <option data-select2-id="656">12</option>
+                                                <option data-select2-id="657">13</option>
+                                                <option data-select2-id="658">14</option>
+                                                <option data-select2-id="659">15</option>
+                                                <option data-select2-id="660">16</option>
+                                                <option data-select2-id="661">17</option>
+                                                <option data-select2-id="662">18</option>
+                                                <option data-select2-id="663">19</option>
+                                                <option data-select2-id="664">20</option>
+                                                <option data-select2-id="665">21</option>
+                                                <option data-select2-id="666">22</option>
+                                                <option data-select2-id="667">23</option>
+                                                <option data-select2-id="668">24</option>
+                                                <option data-select2-id="669">25</option>
+                                                <option data-select2-id="670">26</option>
+                                                <option data-select2-id="671">27</option>
+                                                <option data-select2-id="672">28</option>
+                                                <option data-select2-id="673">29</option>
+                                                <option data-select2-id="674">30</option>
+                                                <option data-select2-id="675">31</option>
+                                                <option data-select2-id="676">32</option>
+                                                <option data-select2-id="677">33</option>
+                                                <option data-select2-id="678">34</option>
+                                                <option data-select2-id="679">35</option>
+                                                <option data-select2-id="680">36</option>
+                                                <option data-select2-id="681">37</option>
+                                                <option data-select2-id="682">38</option>
+                                                <option data-select2-id="683">39</option>
+                                                <option data-select2-id="684">40</option>
+                                                <option data-select2-id="685">41</option>
+                                                <option data-select2-id="686">42</option>
+                                                <option data-select2-id="687">43</option>
+                                                <option data-select2-id="688">44</option>
+                                                <option data-select2-id="689">45</option>
+                                                <option data-select2-id="690">46</option>
+                                                <option data-select2-id="691">47</option>
+                                                <option data-select2-id="692">48</option>
+                                                <option data-select2-id="693">49</option>
+                                                <option data-select2-id="694">50</option>
+                                                <option data-select2-id="695">51</option>
+                                                <option data-select2-id="696">52</option>
+                                                <option data-select2-id="697">53</option>
+                                                <option data-select2-id="698">54</option>
+                                                <option data-select2-id="699">55</option>
+                                                <option data-select2-id="700">56</option>
+                                                <option data-select2-id="701">57</option>
+                                                <option data-select2-id="702">58</option>
+                                                <option data-select2-id="703">59</option>
+                                            </select><span class="select2 select2-container select2-container--default"
+                                                dir="ltr" data-select2-id="800" style="width: 50px;"><span class="selection"><span
+                                                        class="select2-selection select2-selection--single" role="combobox"
+                                                        aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                        aria-labelledby="select2-absenceData-endMinute-container"><span
+                                                            class="select2-selection__rendered" id="select2-absenceData-endMinute-container"
+                                                            role="textbox" aria-readonly="true" title="30">30</span><span
+                                                            class="select2-selection__arrow" role="presentation"><b
+                                                                role="presentation"></b></span></span></span><span
+                                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            분
+                                        </div>
+                                        <div class="description">
+                                            <div>설정된 부재 시간에도 고객은 상담을 요청할 수 있으며, 부재중 메시지가 발송됩니다.</div>
+                                            <div class="sub-text">부재중 설정 기간은 최대 7일까지만 설정 가능합니다.</div>
+                                        </div>
+                                    </td>
+                                    <td><button class="btn btn-default btn-primary">설정</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="separator"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="greeting-config" class="tab-pane">
+                        <div id="greetingConfig">
+                            <ul class="info">
+                                <li>상담 시간 외 안내 메시지, 부재중 메시지 설정 시 상담불가 일시를 명확히 기재해 주세요.</li>
+                            </ul>
+                            <table class="table table-border-top">
+                                <tr>
+                                    <th class="title">상담시간 인사말</th>
+                                    <td class="content"><textarea class="form-control"></textarea>
+                                        <div class="row">
+                                            <div class="description col-xs-10">
+                                                <div>고객이 상담 요청 시 기본으로 전송될 인사말입니다.(한글 기준 120자 내)</div>
+                                                <div class="sub-text">인사말은 언제든지 변경하실 수 있으며, 반드시 설정해주세요.</div>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <div class="tspace-15"><button class="btn btn-default btn-primary pull-right">저장</button></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="separator"></td>
+                                </tr>
+                                <tr>
+                                    <th class="title">상담시간 외 메시지</th>
+                                    <td class="content"><textarea rows="5" class="form-control"></textarea>
+                                        <div class="row">
+                                            <div class="description col-xs-10">
+                                                <div>설정하신 상담가능 시간 외 고객에게 전송될 안내 메시지입니다.(한글 기준 120자 내)</div>
+                                                <div class="sub-text">인사말은 언제든지 변경하실 수 있으며, 반드시 설정해주세요.</div>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <div class="tspace-15"><button class="btn btn-default btn-primary pull-right">저장</button></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="separator"></td>
+                                </tr>
+                                <tr>
+                                    <th class="title">부재중 메시지</th>
+                                    <td class="content"><textarea rows="5" class="form-control" style="height: 69px;"></textarea>
+                                        <div class="row">
+                                            <div class="description col-xs-10">
+                                                <div>부재 설정된 시간 중 고객에게 전송될 안내 메시지 입니다. (한글 기준 120자 이내)</div>
+                                                <div class="sub-text">인사말은 언제든지 변경하실 수 있으며, 반드시 설정해주세요.</div>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <div class="tspace-15"><button class="btn btn-default btn-primary pull-right">저장</button></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="separator"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="counselor-manage" class="tab-pane">
+                        <div id="manageConfig">
+                            <ul class="info">
+                                <li>담당자는 5명까지 추가할 수 있습니다.</li>
+                                <li>등록된 담당자 ID는 고객에게 노출되지 않습니다.</li>
+                            </ul>
+                            <table class="table table-border-top">
+                                <tr>
+                                    <th class="title">담당자 추가</th>
+                                    <td class="content">
+                                        <div class="col-xs-4 row"><input class="form-control"></div> <button class="btn btn-default btn-primary"
+                                            style="margin-left: 8px;">추가</button> <span class="text-danger lspace-10"><span></span></span>
+                                        <div class="description">
+                                            <div class="sub-text">담당자 ID는 영문, 숫자 포함 7~12자로 가능하며 중복될 수 없습니다.</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="separator"></td>
+                                </tr>
+                                <tr>
+                                    <th class="title">담당자 ID 관리</th>
+                                    <td class="content" style="padding: 0px 20px;">
+                                        <table class="table" style="margin: 0px;">
+                                            <tr>
+                                                <td>
+                                                    <div style="font-size: 14px;">
+                                                        test002
+                                                    </div>
+                                                </td>
+                                                <td class="pull-right">
+                                                    <div style="padding: 10px 0px;"><button class="btn btn-primary">수정</button>
+                                                        <!----> <button class="btn btn-default btn-default-primary"
+                                                            style="margin-left: 8px;">삭제</button></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="separator"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="font-size: 14px;">
+                                                        test004
+                                                    </div>
+                                                </td>
+                                                <td class="pull-right">
+                                                    <div style="padding: 10px 0px;"><button class="btn btn-primary">수정</button>
+                                                        <!----> <button class="btn btn-default btn-default-primary"
+                                                            style="margin-left: 8px;">삭제</button></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="separator"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="font-size: 14px;">
+                                                        svcplan01
+                                                    </div>
+                                                </td>
+                                                <td class="pull-right">
+                                                    <div style="padding: 10px 0px;"><button class="btn btn-primary">수정</button>
+                                                        <!----> <button class="btn btn-default btn-default-primary"
+                                                            style="margin-left: 8px;">삭제</button></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="separator"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="font-size: 14px;">
+                                                        mjkim18
+                                                    </div>
+                                                </td>
+                                                <td class="pull-right">
+                                                    <div style="padding: 10px 0px;"><button class="btn btn-primary">수정</button>
+                                                        <!----> <button class="btn btn-default btn-default-primary"
+                                                            style="margin-left: 8px;">삭제</button></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="separator"></td>
+                                            </tr>
+                                        </table>
+                                        <div class="text-danger" style="padding: 16px 0px 30px;">
+                                            &nbsp;
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="separator"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

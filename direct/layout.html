@@ -4,122 +4,234 @@
     <meta charset="utf-8">
     <meta content="block-all-mixed-content" http-equiv="Content-Security-Policy">
     <title>위메프 판매자 톡 상담</title>
-    <link href="css/common.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
-    <body id="index">
-        <div id="app">
-            <div id="main">
-                <nav class="navbar navbar-default menubar">
-                    <div class="container-fluid">
-                        <ul class="nav navbar-nav" style="margin: 0px;">
-                        <li>
-                            <a>
-                                <span>진행중</span> 
-                                <span class="badge badge-blue">45</span>
-                            </a>
-                        </li> 
-                        <li>
-                            <a>
-                                <span>미진행</span> 
-                                <span class="badge badge-blue">1</span>
-                            </a>
-                        </li> 
-                        <li>
-                            <a>
-                                <span>전일 응답</span> 
-                                <span class="badge">-</span>
-                            </a>
-                        </li> 
-                        <li>
-                            <a>
-                                <span>전일 응답 평균</span> 
-                                <span class="badge">-</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span>7일간 응답</span> 
-                                <span class="badge"></span></a></li> 
-                                <li><a><span>7일간 응답 평균</span> 
-                                <span class="badge"> - </span>
-                            </a>
-                        </li>
-                        </ul> 
-                            
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a>
-                                    <div style="display: inline-block; vertical-align: middle;">
-                                        <div class="ellipsis" style="max-width: 250px;">I-SHOPLOG_해외정산_사_입 님</div>
-                                    </div> 
-                                    <span data-placement="bottom" class="badge onoff custom-onoff badge-blue">
-                                        ON
+    <!--link rel="stylesheet" type="text/css" href="css/common.css"-->
+    <link rel="stylesheet" type="text/css" href="css/a.css">
+    </head>
+    <body>
+        <div id="content">
+            <nav class="navbar">
+                <ul class="navbar-nav" style="margin: 0px;">
+                <li><a><span>진행중</span><span class="badge badge-blue">45</span></a></li> 
+                <li><a><span>미진행</span><span class="badge badge-blue">1</span></a></li> 
+                <li><a><span>전일 응답</span><span class="badge">-</span></a></li> 
+                <li><a><span>전일 응답 평균</span><span class="badge">-</span></a></li>
+                <li><a><span>7일간 응답</span><span class="badge">-</span></a></li> 
+                <li><a><span>7일간 응답 평균</span><span class="badge"> - </span></a></li>
+                </ul> 
+                    
+                <ul class="navbar-nav navbar-right">
+                <li>
+                    <a>
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <div class="ellipsis" style="max-width: 250px;">I-SHOPLOG_해외정산_사_입 님</div>
+                        </div> 
+                        <span class="badge badge-blue">
+                            ON
 
-                                        <div class="onoff-message">
-                                            우측 설정 메뉴에서 판매자 톡 상담 사용 여부를 설정할 수 있습니다.
+                            <div class="nav_tip">
+                                우측 설정 메뉴에서 판매자 톡 상담 사용 여부를 설정할 수 있습니다.
+                            </div>
+                        </span>
+                    </a>
+                </li> 
+                <li><div class="separator-x"></div></li> 
+                <li><a href="#" class="link" style="padding: 16px 10px;">설정</a></li> 
+                <li><div class="separator-x"></div></li> 
+                <li><a href="#" class="link" style="padding: 16px 10px 0px 9px;">로그아웃</a></li>
+                </ul>
+            </nav> 
+
+            <div class="main-container">
+                <div class="section_type">
+
+                    <div class="section_con">
+
+                        <!-- 상담리스트 -->
+                        <div class="talk_list">
+                            <ul class="mylist">
+                                <li class="item button active">
+                                <div class="item-box">
+                                    <div>
+                                    <div class="flag-wrapper">
+                                        <span class="flag blank pull-right flag-on"></span>
+                                    </div>
+                                    <div>
+                                        <strong>홍길동</strong>
+                                        (1234567)
+                                        <small>구매</small>
+                                        <small class="date pull-right">2018.12.14 12:46</small>
+                                    </div>
+                                    <div class="row">
+                                        <div class="left_area ellipsis">
+                                        <strong class="title">
+                                            9876543
+                                            <span class="separator-x"></span>
+                                            [플레이특가] CU 편의점 1만원권
+                                        </strong>
                                         </div>
-                                    </span>
-                                </a>
-                            </li> 
-                            <li>
-                                <div class="separator-x"></div>
-                            </li> 
-                            <li>
-                                <a href="#" data-toggle="modal" data-target="#settingTabModal" class="link" style="padding: 16px 10px;">설정</a> 
-                            </li> 
-                            <li>
-                                <div class="separator-x"></div></li> <li><a href="#" class="link" style="padding: 16px 25px 0px 9px;">로그아웃</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav> 
+                                        <div class="right_area">
+                                        <span class="text-danger pull-right">취소문의</span>
+                                        </div>
+                                    </div>
+                                    <div class="message ellipsis reply">댓글댓글</div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                </li>
 
-                <div class="main-container">
-                    <div class="col-xs-4 h100">
-                        <div class="left-container layout-container">
-                            <div class="vertical-half-panel panel-top" style="height: 477px;">
-                                <div class="panel panel-default"></div>
-                            </div> 
-                            
-                            <div id="split" style="top: 477px;"><div id="splitHandle"></div></div> 
-                            
-                            <div class="vertical-half-panel panel-bottom" style="top: 492px; height: 523px;">
-                                <div class="panel panel-default"></div>
+                                <li class="item button">
+                                <div class="item-box">
+                                    <div>
+                                    <div class="flag-wrapper">
+                                        <span class="flag blank pull-right"></span>
+                                    </div>
+                                    <div>
+                                        <strong>이순신</strong>
+                                        (1234567)
+                                        <small>구매</small>
+                                        <small class="date pull-right">0</small>
+                                    </div>
+                                    <div class="row">
+                                        <div class="left_area ellipsis">
+                                        <strong class="title">
+                                            9876543
+                                            <span class="separator-x"></span>
+                                            [슈퍼특가데이] 통영직송 생굴 1kg
+                                        </strong>
+                                        </div>
+                                        <div class="right_area">
+                                        <span class="text-danger pull-right">상품문의</span>
+                                        </div>
+                                    </div>
+                                    <div class="message ellipsis un_read_message">베레베레베레베레베레베레베레</div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                </li>
+
+                                <li class="item button">
+                                <div class="item-box">
+                                    <div>
+                                    <div class="flag-wrapper">
+                                        <span class="flag blank pull-right"></span>
+                                    </div>
+                                    <div>
+                                        <strong>장영실</strong>
+                                        (1234567)
+                                        <small>비구매</small>
+                                        <small class="date pull-right">0</small>
+                                    </div>
+                                    <div class="row">
+                                        <div class="left_area ellipsis">
+                                        <strong class="title">
+                                            9876543
+                                            <span class="separator-x"></span>
+                                            [배이비위크] 아토엔비 유아크림 1+2 특가오픈! / 카드사5% 중복할인까지!!
+                                        </strong>
+                                        </div>
+                                        <div class="right_area">
+                                        <span class="text-danger pull-right">상품문의</span>
+                                        </div>
+                                    </div>
+                                    <div class="message ellipsis reply">댓글댓글</div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                                </li>
+
+                            </ul>
+                            <div class="vb-dragger" style="position: absolute; height: 0px; top: 0px;">
+                                <div class="vb-dragger-styler"></div>
                             </div>
                         </div>
+                        <!-- //상담 리스트 -->
+
                     </div> 
-                                                    
-                    <div class="col-xs-8 h100">
-                        
-                        <div class="layout-container right-container">
-                            <div id="chat">
-                                <div class="h100">
+                    
+                    <div id="split" style="top: 477px;"><div id="splitHandle"></div></div> 
+                    
+                    <div class="section_con v2">
+                        <!-- 리스트 영역-->
 
-                                    <div class="col-xs-6 h100" style="margin-right: 15px;">
-                                        <div class="panel panel-default min-w-393">
-                                        </div>
-                                    </div> 
+                        <!-- //리스트 영역-->
+                    </div> 
+                </div> 
+                                                
+                <div class="section_type v2 " style="display:">
+                    
+                    <div class="section_con"> 
+                        <!-- 채팅 영역-->
 
-                                    <div class="col-xs-6 h100">
-                                        <div class="panel panel-default min-w-393">
-                                        </div>
-                                    </div>
+                        <!-- //채팅 영역-->
+                    </div> 
+                    
+                    <div class="section_con"> 
+                        <!-- 상담결과 영역-->
 
-                                    <div class="nochat">
-                                        <div class="centering text-center">
-                                            <div class="nolist">
-                                                <div class="line1">상담중인 고객이 없습니다</div> 
-                                                <small>(나의 상담 목록에서 선택해주세요)</small>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <!-- //상담결과 영역-->
+                    </div> 
+                </div>
 
-                                </div>
-                            </div>
+                <div class="section_type v2 nochat" style="display:none">
+                    <div class="centering text-center">
+                        <div class="nolist">
+                            <div class="line1">상담중인 고객이 없습니다</div> 
+                            <small>(나의 상담 목록에서 선택해주세요)</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 설정 레이어 -->
+        <div class="layer" style="display:none">
+            <div class="ly_wrap">
+                <h3 class="ly_tit">판매자 톡 상담 설정</h3>
+                <div class="ly_con">
+                    <ul class="ly_tab">
+                        <li class="on"><a href="#a">상담 기본 설정</a></li>
+                        <li ><a href="#a">인사말 설정</a></li>
+                        <li><a href="#a">담당자 관리</a></li>
+                    </ul>
+                    <div class="tab_con">
+                        <ul class="noti_area">
+                            <li>상담 시간 외 안내 메세지, 부재중 메세지 설정 시 상담불가 일시를 명확히 기재해 주세요.</li>
+                        </ul>
+
+                        <table class="table">
+                            <tr>
+                                <th>판매자 톡 상담<br>사용 여부</th> 
+                                <td> 
+                                
+                                </td> 
+                                <td><button class="">중지</button></td>
+                            </tr> 
+
+                            <tr>
+                                <th>요일별 상담가능 시간</th> 
+                                <td> 
+                                    <div>
+                                        <div>설정된 상담 시간 외에도 고객은 상담을 요청할 수 있으며, 상담시간 외 메시지가 발송됩니다.</div> 
+                                        <div>공휴일은 일요일에 준하여 운영됩니다.</div>
+                                    </div>
+                                </td> 
+                                <td><button class="">저장</button></td>
+                            </tr> 
+
+                            <tr>
+                                <th class="title">부재 시간</th> 
+                                <td class="content"></td> 
+                                <td><button class="">설정</button></td>
+                            </tr> 
+
+                        </table>
+
+                    </div>
+                </div>
+                <a href="#a" class="ly_close"><span class="blind">레이어 닫기</span></a>
+            </div>
+        </div>
+        <!-- 설정 레이어 -->
+
     </body>
     </html>

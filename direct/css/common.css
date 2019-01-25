@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul{margin:0;padding:0}
 body,button,input,select,table,textarea{font-size:12px;font-family:Helvetica,"Apple SD Gothic Neo",sans-serif}
 button,input{border-radius:0}
@@ -13,7 +14,6 @@ iframe{overflow:hidden;margin:0;padding:0;border:0}
 
 html{height:100%}
 html body{width:100%;height:100%;background-color:#eff0f2 !important}
-html body #app{height:100%}
 html body .login{position:relative;top:50%;width:600px;height:496px;margin:0 auto;background-color:#fff;color:#333;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
 html body .login h3{margin-top:67px;font-size:32px;font-weight:500;text-align:center}
 html body .login h3 span{color:#5f84c8}
@@ -126,7 +126,6 @@ td,th{padding:0}
 a,a:visited{text-decoration:underline}
 a[href]:after{content:' ("\' attr(href) \'")'}
 abbr[title]:after{content:' ("\' attr(title) \'")'}
-a[href^=javascript:]:after,a[href^=#]:after{content:''}
 blockquote,pre{border:1px solid #999;page-break-inside:avoid}
 thead{display:table-header-group}
 img,tr{page-break-inside:avoid}
@@ -1306,11 +1305,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#337ab7}
 .alert-danger{border-color:#ebccd1;background-color:#f2dede;color:#a94442}
 .alert-danger hr{border-top-color:#e4b9c0}
 .alert-danger .alert-link{color:#843534}
-@-webkit-keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}
-@keyframes progress-bar-stripes{
-frombackground-position:40px 0}
-to{background-position:0 0}
-}
+
 .progress{overflow:hidden;height:20px;margin-bottom:20px;border-radius:4px;background-color:#f5f5f5;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.1);box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}
 .progress-bar{float:left;width:0;height:100%;background-color:#337ab7;font-size:12px;line-height:20px;color:#fff;text-align:center;-webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);box-shadow:inset 0 -1px 0 rgba(0,0,0,.15);-webkit-transition:width .6s ease;transition:width .6s ease}
 .progress-bar-striped,.progress-striped .progress-bar{background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-size:40px 40px}
@@ -1542,7 +1537,7 @@ button.close{padding:0;border:0;background:0 0;-webkit-appearance:none;cursor:po
 .carousel-control .icon-prev:before{content:'\2039'}
 .carousel-control .icon-next:before{content:'\203A'}
 .carousel-indicators{position:absolute;left:50%;bottom:10px;z-index:15;width:60%;margin-left:-30%;padding-left:0;text-align:center;list-style:none}
-.carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;border:1px solid #fff;border-radius:10px;background-color:#000\9;background-color:rgba(0,0,0,0);text-indent:-999px;cursor:pointer}
+.carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;border:1px solid #fff;border-radius:10px;background-color:#000;background-color:rgba(0,0,0,0);text-indent:-999px;cursor:pointer}
 .carousel-indicators .active{width:12px;height:12px;margin:0;background-color:#fff}
 .carousel-caption{position:absolute;right:15%;left:15%;bottom:20px;z-index:10;padding-top:20px;padding-bottom:20px;color:#fff;text-align:center;text-shadow:0 1px 2px rgba(0,0,0,.6)}
 .carousel-caption .btn{text-shadow:none}
@@ -1666,65 +1661,63 @@ td.visible-print,th.visible-print{display:table-cell!important}
 /* # sourceMappingURL=bootstrap.min.css.map */
 html{overflow-x:hidden;overflow-y:hidden;height:100%}
 html body{height:100%;background-color:#f5f6f7}
-html body #app{height:100%}
-html body #app #main{min-width:1240px !important;min-height:500px !important;height:100%}
 
-html body #app #main a:focus,html body #app #main button:focus{outline:none}
-html body #app #main .nav-pills{background-color:#bcc2ca;font-size:16px}
-html body #app #main .nav-pills a{padding:16px 0;border-radius:0;color:#fff}
-html body #app #main .nav-pills a.separator-both{border-left:1px solid #fff;border-right:1px solid #fff}
-html body #app #main .nav-pills a:hover{background-color:rgba(0,0,0,0.03)}
-html body #app #main .nav-pills .active a{background-color:#fff !important;color:#333 !important}
-html body #app #main .nav-pills .active a:hover{background-color:#fff;opacity:1}
-html body #app #main .navbar-default{width:100%;height:56px;margin-bottom:0 !important;margin-right:-15px;border-radius:0 !important;border-color:#3b4047;background-color:#3b4047}
-html body #app #main .navbar-default .container-fluid{min-width:1240px}
-html body #app #main .navbar-default.menubar .container-fluid{height:56px}
-html body #app #main .navbar-default.menubar li{height:100%}
-html body #app #main .navbar-default.menubar span{font-size:14px;font-weight:normal;letter-spacing:-1px}
-html body #app #main .navbar-default .navbar-nav{height:56px}
-html body #app #main .navbar-default .navbar-nav a{height:100%;padding:15px;color:#fff}
-html body #app #main .navbar-default .navbar-nav a svg{-webkit-transform:translate(0,2px);transform:translate(0,2px)}
-html body #app #main .navbar-default .navbar-nav a span{vertical-align:middle}
-html body #app #main .navbar-default .navbar-nav .badge{min-width:21px;margin-left:6px;padding:3px 6px;font-size:14px;font-weight:500}
-html body #app #main .navbar-default .navbar-nav .badge small{font-size:12px;font-weight:normal}
-html body #app #main .navbar-default .navbar-nav .badge.onoff{padding:3px 5px 3px 4px;font-size:11px;font-weight:normal;letter-spacing:0}
-html body #app #main .navbar-default .navbar-nav .badge-blue{background-color:#5a81c9}
-html body #app #main .navbar-default .navbar-nav .separator-x{width:1px;height:7px;margin-top:22px;background-color:#777c85}
-html body #app #main .navbar-default .navbar-right{margin:0 -15px;font-size:12px}
-html body #app #main .navbar-default .navbar-right a.link:hover{text-decoration:underline}
-html body #app #main .main-container{width:calc(100% - 30px);height:calc(100% - 86px);margin-top:15px;margin-left:15px}
-html body #app #main .main-container .col-xs-4{width:calc((100% - 30px) / 3);padding:0 !important}
-html body #app #main .main-container .col-xs-8{width:calc(15px + calc((100% - 30px) / 3) * 2);margin-left:15px;padding:0 !important}
-html body #app #main .main-container .col-xs-6{width:calc((100% - 15px) / 2.0001);padding:0 !important}
-html body #app #main .left-container{position:absolute;width:100%;min-width:393px !important}
-html body #app #main .layout-container{height:calc(100% - 0px)}
-html body #app #main .layout-container .panel{height:100%;border-radius:0 !important;-webkit-box-shadow:none !important;box-shadow:none !important}
-html body #app #main .layout-container .panel .panel-heading{height:51px;padding:16px;border-bottom:0;background-color:#fff !important}
-html body #app #main .layout-container .panel .panel-heading .panel-title{height:19px;padding:0;font-weight:600;font-size:16px}
-html body #app #main .layout-container .panel .panel-heading .panel-title .count{font-size:17px}
-html body #app #main .layout-container .panel .panel-heading .panel-title .panel-title-separator{display:inline-block;width:1px;height:13px;margin:0 7px;background-color:#cfcfcf}
-html body #app #main .layout-container .panel .panel-body{height:100%;margin:0;padding:0}
-html body #app #main .layout-container .panel .panel-body .control-bar{margin:0;padding-top:10px;padding-bottom:10px}
-html body #app #main .layout-container .panel .panel-body .control-bar label{margin-bottom:0 !important;font-weight:normal;vertical-align:middle}
-html body #app #main .layout-container .panel .panel-body .control-bar input{margin-top:0 !important;vertical-align:middle}
-html body #app #main .layout-container .panel .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}
-html body #app #main .layout-container .vertical-half-panel{position:absolute;width:100%;height:calc((100% - 15px) / 2);background-color:#fff}
-html body #app #main .layout-container .vertical-half-panel .panel-loader{position:absolute;z-index:999;width:100%;height:100%;background-color:#fff;opacity:0.5}
-html body #app #main .layout-container .vertical-half-panel .panel-loader .loader-icon{position:relative;top:calc(50% - 33px)}
-html body #app #main .layout-container .vertical-half-panel .panel-loader .loader-icon:after{display:block;position:absolute;left:calc(50% - 2.5em);width:5em;height:5em;border:2px solid #777;border-radius:290486px;border-right-color:transparent;border-top-color:transparent;-webkit-animation:spinAround .5s infinite linear;animation:spinAround .5s infinite linear;content:''}
-html body #app #main .layout-container .vertical-half-panel .panel-body{height:calc(100% - 51px)}
-html body #app #main .layout-container .scroll-wrapper{overflow-y:scroll;overflow-x:hidden;height:calc(100% - 55px)}
-html body #app #main .layout-container #split{position:absolute;top:calc((100% - 15px) / 2);width:100%;height:15px}
-html body #app #main .layout-container #split #splitHandle{width:25px;height:7px;margin:4px auto;background:url(data:image/png;cursor:ns-resize}
-html body #app #main .layout-container .panel-bottom{top:calc((100% - 15px) / 2 + 15px);bottom:0}
-html body #app #main .nolist .line1{height:19px;font-size:15px;color:#333}
-html body #app #main .nolist small{height:15px;margin-top:5px;font-size:12px;color:#666}
-html body #app .vb > .vb-dragger{right:0;z-index:5;width:8px}
-html body #app .vb > .vb-dragger > .vb-dragger-styler{display:block;height:calc(100% - 5px);margin:3px 3px 3px 0;border-radius:20px;background-color:rgba(86,86,86,0.1);-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:rotate3d(0,0,0,0);transform:rotate3d(0,0,0,0);-webkit-transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out;transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out}
-html body #app .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
-html body #app .vb > .vb-dragger:hover > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
-html body #app .vb.vb-dragging > .vb-dragger > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
-html body #app .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
+a:focus,button:focus{outline:none}
+.nav-pills{background-color:#bcc2ca;font-size:16px}
+.nav-pills a{padding:16px 0;border-radius:0;color:#fff}
+.nav-pills a.separator-both{border-left:1px solid #fff;border-right:1px solid #fff}
+.nav-pills a:hover{background-color:rgba(0,0,0,0.03)}
+.nav-pills .active a{background-color:#fff !important;color:#333 !important}
+.nav-pills .active a:hover{background-color:#fff;opacity:1}
+.navbar-default{width:100%;height:56px;margin-bottom:0 !important;margin-right:-15px;border-radius:0 !important;border-color:#3b4047;background-color:#3b4047}
+.navbar-default .container-fluid{min-width:1240px}
+.navbar-default.menubar .container-fluid{height:56px}
+.navbar-default.menubar li{height:100%} d
+.navbar-default.menubar span{font-size:14px;font-weight:normal;letter-spacing:-1px}
+.navbar-default .navbar-nav{height:56px}
+.navbar-default .navbar-nav a{height:100%;padding:15px;color:#fff}
+.navbar-default .navbar-nav a svg{-webkit-transform:translate(0,2px);transform:translate(0,2px)}
+.navbar-default .navbar-nav a span{vertical-align:middle}
+.navbar-default .navbar-nav .badge{min-width:21px;margin-left:6px;padding:3px 6px;font-size:14px;font-weight:500}
+.navbar-default .navbar-nav .badge small{font-size:12px;font-weight:normal}
+.navbar-default .navbar-nav .badge.onoff{padding:3px 5px 3px 4px;font-size:11px;font-weight:normal;letter-spacing:0}
+.navbar-default .navbar-nav .badge-blue{background-color:#5a81c9}
+.navbar-default .navbar-nav .separator-x{width:1px;height:7px;margin-top:22px;background-color:#777c85}
+.navbar-default .navbar-right{margin:0 -15px;font-size:12px}
+.navbar-default .navbar-right a.link:hover{text-decoration:underline}
+.main-container{width:calc(100% - 30px);height:calc(100% - 86px);margin-top:15px;margin-left:15px}
+.main-container .col-xs-4{width:calc((100% - 30px) / 3);padding:0 !important}
+.main-container .col-xs-8{width:calc(15px + calc((100% - 30px) / 3) * 2);margin-left:15px;padding:0 !important}
+.main-container .col-xs-6{width:calc((100% - 15px) / 2.0001);padding:0 !important}
+.left-container{position:absolute;width:100%;min-width:393px !important}
+.layout-container{height:calc(100% - 0px)}
+.layout-container .panel{height:100%;border-radius:0 !important;-webkit-box-shadow:none !important;box-shadow:none !important}
+.layout-container .panel .panel-heading{height:51px;padding:16px;border-bottom:0;background-color:#fff !important}
+.layout-container .panel .panel-heading .panel-title{height:19px;padding:0;font-weight:600;font-size:16px}
+.layout-container .panel .panel-heading .panel-title .count{font-size:17px}
+.layout-container .panel .panel-heading .panel-title .panel-title-separator{display:inline-block;width:1px;height:13px;margin:0 7px;background-color:#cfcfcf}
+.layout-container .panel .panel-body{height:100%;margin:0;padding:0}
+.layout-container .panel .panel-body .control-bar{margin:0;padding-top:10px;padding-bottom:10px}
+.layout-container .panel .panel-body .control-bar label{margin-bottom:0 !important;font-weight:normal;vertical-align:middle}
+.layout-container .panel .panel-body .control-bar input{margin-top:0 !important;vertical-align:middle}
+.layout-container .panel .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}
+.layout-container .vertical-half-panel{position:absolute;width:100%;height:calc((100% - 15px) / 2);background-color:#fff}
+.layout-container .vertical-half-panel .panel-loader{position:absolute;z-index:999;width:100%;height:100%;background-color:#fff;opacity:0.5}
+.layout-container .vertical-half-panel .panel-loader .loader-icon{position:relative;top:calc(50% - 33px)}
+.layout-container .vertical-half-panel .panel-loader .loader-icon:after{display:block;position:absolute;left:calc(50% - 2.5em);width:5em;height:5em;border:2px solid #777;border-radius:290486px;border-right-color:transparent;border-top-color:transparent;-webkit-animation:spinAround .5s infinite linear;animation:spinAround .5s infinite linear;content:''}
+.layout-container .vertical-half-panel .panel-body{height:calc(100% - 51px)}
+.layout-container .scroll-wrapper{overflow-y:scroll;overflow-x:hidden;height:calc(100% - 55px)}
+.layout-container #split{position:absolute;top:calc((100% - 15px) / 2);width:100%;height:15px}
+.layout-container #split #splitHandle{width:25px;height:7px;margin:4px auto;background:url()}
+.layout-container .panel-bottom{top:calc((100% - 15px) / 2 + 15px);bottom:0}
+.nolist .line1{height:19px;font-size:15px;color:#333}
+.nolist small{height:15px;margin-top:5px;font-size:12px;color:#666}
+ .vb > .vb-dragger{right:0;z-index:5;width:8px}
+ .vb > .vb-dragger > .vb-dragger-styler{display:block;height:calc(100% - 5px);margin:3px 3px 3px 0;border-radius:20px;background-color:rgba(86,86,86,0.1);-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:rotate3d(0,0,0,0);transform:rotate3d(0,0,0,0);-webkit-transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out;transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out}
+ .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
+ .vb > .vb-dragger:hover > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
+ .vb.vb-dragging > .vb-dragger > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
+ .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
 .vb-scroll-content{position:relative !important}
 input.form-control{border-radius:0}
 #settingTabModal{background:transparent}
@@ -1814,7 +1807,7 @@ html{overflow-y:scroll}
 .col-pc-5{width:5%}
 .col-px-50{width:50px}
 
-.info-icon{display:inline-block;width:16px;height:16px;margin-top:-2px;margin-left:5px;background-image:url(d)vertical-align:middle}
+.info-icon{display:inline-block;width:16px;height:16px;margin-top:-2px;margin-left:5px;background-image:url();vertical-align:middle}
 .flag-wrapper{height:20px}
 .flag-wrapper span.flag{display:inline-block;width:10px;height:13px;margin-top:4px;border:0}
 .flag-wrapper .flag-on{background-image:url();cursor:pointer}
@@ -1858,7 +1851,7 @@ img.blank{background-image:none}
 .config #consult-tabs .nav-item a{margin-bottom:0;font-size:16px}
 .config #consult-tabs .active a{background-color:#fff !important;color:#333 !important}
 .config .info{padding:30px 0}
-.config .info li{height:22px !important;margin-top:1px;background:url();background-size:16px 16px;background-position:0 2px;font-size:14px;color:#666;text-indent:22px;) no-repeat}
+.config .info li{height:22px !important;margin-top:1px;background:url();background-size:16px 16px;background-position:0 2px;font-size:14px;color:#666;text-indent:22px;}
 .config .table-border-top{margin-bottom:0;border-top:1px solid #333}
 .config .table-border-top th{width:150px;background-color:#f7f7f7}
 .config .table-border-top td.content{padding:20px}
@@ -1956,13 +1949,11 @@ nav .onoff-message:before{position:absolute;right:125px;bottom:100%;width:0;heig
 #chat .tab-content #order .item-detail .delivery{margin-top:20px}
 #chat .tab-content #order .item-detail .delivery p{margin:5px 0 0;padding:0}
 @media all and (-ms-high-contrast: none),(-ms-high-contrast: active){
-#chat .tab-content #counsel{/* IE10+ CSS styles go here */}
 #chat .tab-content #counsel .panel-body{width:calc(100% + 17px) !important}
 }
 @supports (-ms-accelerator:true){
 }
 #chat .tab-content #counsel .panel-body{width:calc(100% + 17px) !important}
-}
 #chat .tab-content #counsel .item-box{cursor:pointer}
 #chat .history-wrapper{width:400px;height:700px;margin:20px auto;border:1px solid #ddd}
 #chat .history-wrapper .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}
@@ -2185,65 +2176,63 @@ ol.linenums li{padding-left:12px;line-height:20px;color:#bebec5;text-shadow:0 1p
 
 html{overflow-x:hidden;overflow-y:hidden;height:100%}
 html body{height:100%;background-color:#f5f6f7}
-html body #app{height:100%}
-html body #app #main{min-width:1240px !important;min-height:500px !important;height:100%}
 
-html body #app #main a:focus,html body #app #main button:focus{outline:none}
-html body #app #main .nav-pills{background-color:#bcc2ca;font-size:16px}
-html body #app #main .nav-pills a{padding:16px 0;border-radius:0;color:#fff}
-html body #app #main .nav-pills a.separator-both{border-left:1px solid #fff;border-right:1px solid #fff}
-html body #app #main .nav-pills a:hover{background-color:rgba(0,0,0,0.03)}
-html body #app #main .nav-pills .active a{background-color:#fff !important;color:#333 !important}
-html body #app #main .nav-pills .active a:hover{background-color:#fff;opacity:1}
-html body #app #main .navbar-default{width:100%;height:56px;margin-bottom:0 !important;margin-right:-15px;border-radius:0 !important;border-color:#3b4047;background-color:#3b4047}
-html body #app #main .navbar-default .container-fluid{min-width:1240px}
-html body #app #main .navbar-default.menubar .container-fluid{height:56px}
-html body #app #main .navbar-default.menubar li{height:100%}
-html body #app #main .navbar-default.menubar span{font-size:14px;font-weight:normal;letter-spacing:-1px}
-html body #app #main .navbar-default .navbar-nav{height:56px}
-html body #app #main .navbar-default .navbar-nav a{height:100%;padding:15px;color:#fff}
-html body #app #main .navbar-default .navbar-nav a svg{-webkit-transform:translate(0,2px);transform:translate(0,2px)}
-html body #app #main .navbar-default .navbar-nav a span{vertical-align:middle}
-html body #app #main .navbar-default .navbar-nav .badge{min-width:21px;margin-left:6px;padding:3px 6px;font-size:14px;font-weight:500}
-html body #app #main .navbar-default .navbar-nav .badge small{font-size:12px;font-weight:normal}
-html body #app #main .navbar-default .navbar-nav .badge.onoff{padding:3px 5px 3px 4px;font-size:11px;font-weight:normal;letter-spacing:0}
-html body #app #main .navbar-default .navbar-nav .badge-blue{background-color:#5a81c9}
-html body #app #main .navbar-default .navbar-nav .separator-x{width:1px;height:7px;margin-top:22px;background-color:#777c85}
-html body #app #main .navbar-default .navbar-right{margin:0 -15px;font-size:12px}
-html body #app #main .navbar-default .navbar-right a.link:hover{text-decoration:underline}
-html body #app #main .main-container{width:calc(100% - 30px);height:calc(100% - 86px);margin-top:15px;margin-left:15px}
-html body #app #main .main-container .col-xs-4{width:calc((100% - 30px) / 3);padding:0 !important}
-html body #app #main .main-container .col-xs-8{width:calc(15px + calc((100% - 30px) / 3) * 2);margin-left:15px;padding:0 !important}
-html body #app #main .main-container .col-xs-6{width:calc((100% - 15px) / 2.0001);padding:0 !important}
-html body #app #main .left-container{position:absolute;width:100%;min-width:393px !important}
-html body #app #main .layout-container{height:calc(100% - 0px)}
-html body #app #main .layout-container .panel{height:100%;border-radius:0 !important;-webkit-box-shadow:none !important;box-shadow:none !important}
-html body #app #main .layout-container .panel .panel-heading{height:51px;padding:16px;border-bottom:0;background-color:#fff !important}
-html body #app #main .layout-container .panel .panel-heading .panel-title{height:19px;padding:0;font-weight:600;font-size:16px}
-html body #app #main .layout-container .panel .panel-heading .panel-title .count{font-size:17px}
-html body #app #main .layout-container .panel .panel-heading .panel-title .panel-title-separator{display:inline-block;width:1px;height:13px;margin:0 7px;background-color:#cfcfcf}
-html body #app #main .layout-container .panel .panel-body{height:100%;margin:0;padding:0}
-html body #app #main .layout-container .panel .panel-body .control-bar{margin:0;padding-top:10px;padding-bottom:10px}
-html body #app #main .layout-container .panel .panel-body .control-bar label{margin-bottom:0 !important;font-weight:normal;vertical-align:middle}
-html body #app #main .layout-container .panel .panel-body .control-bar input{margin-top:0 !important;vertical-align:middle}
-html body #app #main .layout-container .panel .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}
-html body #app #main .layout-container .vertical-half-panel{position:absolute;width:100%;height:calc((100% - 15px) / 2);background-color:#fff}
-html body #app #main .layout-container .vertical-half-panel .panel-loader{position:absolute;z-index:999;width:100%;height:100%;background-color:#fff;opacity:0.5}
-html body #app #main .layout-container .vertical-half-panel .panel-loader .loader-icon{position:relative;top:calc(50% - 33px)}
-html body #app #main .layout-container .vertical-half-panel .panel-loader .loader-icon:after{display:block;position:absolute;left:calc(50% - 2.5em);width:5em;height:5em;border:2px solid #777;border-radius:290486px;border-right-color:transparent;border-top-color:transparent;-webkit-animation:spinAround .5s infinite linear;animation:spinAround .5s infinite linear;content:''}
-html body #app #main .layout-container .vertical-half-panel .panel-body{height:calc(100% - 51px)}
-html body #app #main .layout-container .scroll-wrapper{overflow-y:scroll;overflow-x:hidden;height:calc(100% - 55px)}
-html body #app #main .layout-container #split{position:absolute;top:calc((100% - 15px) / 2);width:100%;height:15px}
-html body #app #main .layout-container #split #splitHandle{width:25px;height:7px;margin:4px auto;background:url();cursor:ns-resize}
-html body #app #main .layout-container .panel-bottom{top:calc((100% - 15px) / 2 + 15px);bottom:0}
-html body #app #main .nolist .line1{height:19px;font-size:15px;color:#333}
-html body #app #main .nolist small{height:15px;margin-top:5px;font-size:12px;color:#666}
-html body #app .vb > .vb-dragger{right:0;z-index:5;width:8px}
-html body #app .vb > .vb-dragger > .vb-dragger-styler{display:block;height:calc(100% - 5px);margin:3px 3px 3px 0;border-radius:20px;background-color:rgba(86,86,86,0.1);-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:rotate3d(0,0,0,0);transform:rotate3d(0,0,0,0);-webkit-transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out;transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out}
-html body #app .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
-html body #app .vb > .vb-dragger:hover > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
-html body #app .vb.vb-dragging > .vb-dragger > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
-html body #app .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
+a:focus,button:focus{outline:none}
+.nav-pills{background-color:#bcc2ca;font-size:16px}
+.nav-pills a{padding:16px 0;border-radius:0;color:#fff}
+.nav-pills a.separator-both{border-left:1px solid #fff;border-right:1px solid #fff}
+.nav-pills a:hover{background-color:rgba(0,0,0,0.03)}
+.nav-pills .active a{background-color:#fff !important;color:#333 !important}
+.nav-pills .active a:hover{background-color:#fff;opacity:1}
+.navbar-default{width:100%;height:56px;margin-bottom:0 !important;margin-right:-15px;border-radius:0 !important;border-color:#3b4047;background-color:#3b4047}
+.navbar-default .container-fluid{min-width:1240px}
+.navbar-default.menubar .container-fluid{height:56px}
+.navbar-default.menubar li{height:100%}
+.navbar-default.menubar span{font-size:14px;font-weight:normal;letter-spacing:-1px}
+.navbar-default .navbar-nav{height:56px}
+.navbar-default .navbar-nav a{height:100%;padding:15px;color:#fff}
+.navbar-default .navbar-nav a svg{-webkit-transform:translate(0,2px);transform:translate(0,2px)}
+.navbar-default .navbar-nav a span{vertical-align:middle}
+.navbar-default .navbar-nav .badge{min-width:21px;margin-left:6px;padding:3px 6px;font-size:14px;font-weight:500}
+.navbar-default .navbar-nav .badge small{font-size:12px;font-weight:normal}
+.navbar-default .navbar-nav .badge.onoff{padding:3px 5px 3px 4px;font-size:11px;font-weight:normal;letter-spacing:0}
+.navbar-default .navbar-nav .badge-blue{background-color:#5a81c9}
+.navbar-default .navbar-nav .separator-x{width:1px;height:7px;margin-top:22px;background-color:#777c85}
+.navbar-default .navbar-right{margin:0 -15px;font-size:12px}
+.navbar-default .navbar-right a.link:hover{text-decoration:underline}
+.main-container{width:calc(100% - 30px);height:calc(100% - 86px);margin-top:15px;margin-left:15px}
+.main-container .col-xs-4{width:calc((100% - 30px) / 3);padding:0 !important}
+.main-container .col-xs-8{width:calc(15px + calc((100% - 30px) / 3) * 2);margin-left:15px;padding:0 !important}
+.main-container .col-xs-6{width:calc((100% - 15px) / 2.0001);padding:0 !important}
+.left-container{position:absolute;width:100%;min-width:393px !important}
+.layout-container{height:calc(100% - 0px)}
+.layout-container .panel{height:100%;border-radius:0 !important;-webkit-box-shadow:none !important;box-shadow:none !important}
+.layout-container .panel .panel-heading{height:51px;padding:16px;border-bottom:0;background-color:#fff !important}
+.layout-container .panel .panel-heading .panel-title{height:19px;padding:0;font-weight:600;font-size:16px}
+.layout-container .panel .panel-heading .panel-title .count{font-size:17px}
+.layout-container .panel .panel-heading .panel-title .panel-title-separator{display:inline-block;width:1px;height:13px;margin:0 7px;background-color:#cfcfcf}
+.layout-container .panel .panel-body{height:100%;margin:0;padding:0}
+.layout-container .panel .panel-body .control-bar{margin:0;padding-top:10px;padding-bottom:10px}
+.layout-container .panel .panel-body .control-bar label{margin-bottom:0 !important;font-weight:normal;vertical-align:middle}
+.layout-container .panel .panel-body .control-bar input{margin-top:0 !important;vertical-align:middle}
+.layout-container .panel .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}
+.layout-container .vertical-half-panel{position:absolute;width:100%;height:calc((100% - 15px) / 2);background-color:#fff}
+.layout-container .vertical-half-panel .panel-loader{position:absolute;z-index:999;width:100%;height:100%;background-color:#fff;opacity:0.5}
+.layout-container .vertical-half-panel .panel-loader .loader-icon{position:relative;top:calc(50% - 33px)}
+.layout-container .vertical-half-panel .panel-loader .loader-icon:after{display:block;position:absolute;left:calc(50% - 2.5em);width:5em;height:5em;border:2px solid #777;border-radius:290486px;border-right-color:transparent;border-top-color:transparent;-webkit-animation:spinAround .5s infinite linear;animation:spinAround .5s infinite linear;content:''}
+.layout-container .vertical-half-panel .panel-body{height:calc(100% - 51px)}
+.layout-container .scroll-wrapper{overflow-y:scroll;overflow-x:hidden;height:calc(100% - 55px)}
+.layout-container #split{position:absolute;top:calc((100% - 15px) / 2);width:100%;height:15px}
+.layout-container #split #splitHandle{width:25px;height:7px;margin:4px auto;background:url();cursor:ns-resize}
+.layout-container .panel-bottom{top:calc((100% - 15px) / 2 + 15px);bottom:0}
+.nolist .line1{height:19px;font-size:15px;color:#333}
+.nolist small{height:15px;margin-top:5px;font-size:12px;color:#666}
+ .vb > .vb-dragger{right:0;z-index:5;width:8px}
+ .vb > .vb-dragger > .vb-dragger-styler{display:block;height:calc(100% - 5px);margin:3px 3px 3px 0;border-radius:20px;background-color:rgba(86,86,86,0.1);-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:rotate3d(0,0,0,0);transform:rotate3d(0,0,0,0);-webkit-transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out;transition:background-color 100ms ease-out,margin 100ms ease-out,height 100ms ease-out}
+ .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
+ .vb > .vb-dragger:hover > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
+ .vb.vb-dragging > .vb-dragger > .vb-dragger-styler{height:100%;margin:0;background-color:rgba(86,86,86,0.4)}
+ .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler{background-color:rgba(86,86,86,0.4)}
 .vb-scroll-content{position:relative !important}
 input.form-control{border-radius:0}
 #settingTabModal{background:transparent}
@@ -2398,14 +2387,7 @@ html{overflow-y:scroll}
 #chat .tab-content #order .item-detail ul li{margin:10px 0 0;padding:0;color:#666}
 #chat .tab-content #order .item-detail .delivery{margin-top:20px}
 #chat .tab-content #order .item-detail .delivery p{margin:5px 0 0;padding:0}
-@media all and (-ms-high-contrast: none),(-ms-high-contrast: active){
-#chat .tab-content #counsel{/* IE10+ CSS styles go here */}
 #chat .tab-content #counsel .panel-body{width:calc(100% + 17px) !important}
-}
-@supports (-ms-accelerator:true){
-}
-#chat .tab-content #counsel .panel-body{width:calc(100% + 17px) !important}
-}
 #chat .tab-content #counsel .item-box{cursor:pointer}
 #chat .history-wrapper{width:400px;height:700px;margin:20px auto;border:1px solid #ddd}
 #chat .history-wrapper .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}

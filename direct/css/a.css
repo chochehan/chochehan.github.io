@@ -1,0 +1,95 @@
+@charset "UTF-8";
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,select,table,td,textarea,th,ul{margin:0;padding:0}
+body,button,input,select,table,textarea{font-size:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;color:#333}
+button,input{border-radius:0}
+fieldset,img{border:0}
+ol,ul{list-style:none}
+address,em{font-style:normal}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+iframe{overflow:hidden;margin:0;padding:0;border:0}
+.blind{position:absolute;overflow:hidden;clip:rect(0 0 0 0);margin:-1px;width:1px;height:1px}
+*, :after, :before{box-sizing: border-box;}
+
+html,body,#content{width:100%;height:100%;background-color:#eff0f2 !important}
+body{min-width:1240px;min-height:500px;height:100%;line-height:1.42857143;}
+
+.navbar{width:100%;min-width:1240px;height:56px;margin:0 0 15px;padding:0 15px;border: 1px solid transparent;background-color:#3b4047;}
+.navbar li{float:left}
+.navbar li a{display:block;height:56px;padding:15px;color:#fff;line-height:20px}
+.navbar li a:hover{text-decoration:none}
+.navbar li a.link:hover{text-decoration:underline}
+.navbar li a span{font-size:14px;font-weight:400;letter-spacing:-1px;vertical-align:middle}
+.navbar .navbar-nav{float:left}
+.navbar .navbar-right{float:right;font-size:12px;font-weight:400;letter-spacing:0}
+.navbar .navbar-right span{font-size:11px;letter-spacing: 0;position: relative;}
+.badge{display:inline-block;min-width:21px;padding:3px 6px;margin-left:6px;font-size:14px;font-weight:500;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:middle;background-color:#777;border-radius:10px}
+.badge-blue{background-color:#5a81c9;}
+.separator-x{width:1px;height:7px;background-color:#777c85;margin-top:22px;}
+.nav_tip {display:none;position:absolute;top:calc(100% + 6px);right:-119px;padding:10px;background-color:#fff;border:1px solid#bbb;color:#666;z-index:1;min-width:350px;font-size:1em;text-align:center;white-space:nowrap;}
+.badge:hover .nav_tip{display:block}
+.nav_tip:before {position:absolute;right:125px;bottom:100%;border:6px solid transparent;border-bottom:6px solid #fff;margin-left:-6px;content:" ";height:0;width:0;pointer-events: none;}
+
+.main-container{width:calc(100% - 30px);height: calc(100% - 86px);margin-top:15px;margin-left:15px;}
+.section_type{position:relative;float:left;width: calc((100% - 30px) / 3);height:100%}
+.section_con{float:left;height:calc((100% - 15px) / 2);background-color:#fff;border: 1px solid #ddd;width:100%}
+.section_con.v2{position:absolute;top:calc((100% - 15px) / 2 + 15px)}
+.section_type.v2{width:calc(15px + calc((100% - 30px) / 3) * 2);margin-left:15px}
+.section_type.v2 .section_con{width:calc((100% - 15px) / 2.0001);height:100%;}
+.section_type.v2 .section_con:first-child{margin-right:15px}
+.section_type.v2.nochat{background-color:#fff;border: 1px solid #ddd;}
+.centering{position:relative;margin:0 auto;top:50%;transform:translateY(-50%);font-size:15px;text-align:center;color:#333}
+.centering small{margin-top:5px;height:15px;font-size:12px;color:#666;}
+
+/* 설정 레이어 */
+.layer{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.3);}
+.ly_wrap{width:900px;height:760px;position:absolute;top:50%;left:50%;margin:-380px 0 0 -450px;padding:40px 30px 50px;background-color:#fff}
+.ly_wrap h3{font-size:24px;font-weight:500}
+.ly_wrap .ly_con{margin-top:22px}
+.ly_wrap .ly_tab{overflow:hidden;height:52px;background-color:#bcc2ca;border:1px solid #bcc2ca;border-bottom:0}
+.ly_wrap .ly_tab li{float:left;width:280px;height:52px;margin-left:-1px}
+.ly_wrap .ly_tab li:first-child{margin-left:0}
+.ly_wrap .ly_tab li:first-child a{border-left:0}
+.ly_wrap .ly_tab li a{display:block;height:52px;text-align:center;background-color:#bcc2ca;border-left:1px solid #fff;font-size:16px;padding:15px;text-decoration:none;color:#fff}
+.ly_wrap .ly_tab li.on a{background-color:#fff;border-width:0;color:#333}
+.ly_wrap .noti_area{padding:30px 0;}
+.ly_wrap .noti_area li{margin-top:1px;height:22px!important;color:#666;background:url(../img/noti.png) 0 2px no-repeat;text-indent:22px;}
+.ly_wrap .ly_close{position:absolute;top:40px;right:30px;display:block;width:25px;height:25px;background:url(../img/btn_close.png) no-repeat;}
+
+/* 상담 리스트 */
+.talk_list .mylist .pull-right{float:right!important}
+.talk_list .mylist .ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.talk_list .mylist .button{cursor:pointer}
+.talk_list .mylist .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}
+
+.talk_list{overflow:hidden;position:relative;height:calc(100% - 55px);line-height:1.4}
+.talk_list .mylist{display:block;overflow:hidden scroll;position:relative!important;width:100%;height:100%;padding-right:20px;box-sizing:content-box}
+
+.talk_list .mylist .item.button:hover{background-color:#F8F8F8}
+.talk_list .mylist .active{background-color:#f2f7fd !important}
+.talk_list .mylist .item .item-box{padding:7px 17px 26px}
+.talk_list .mylist .item .item-box .user-name{font-size:15px}
+.talk_list .mylist .item .item-box small{padding-left:4px;font-size:12px;color:#999}
+.talk_list .mylist .item .item-box .separator-x{display:inline-block;width:1px;height:10px;margin:0 6px;background-color:#ccc}
+.talk_list .mylist .item .item-box .un_read_message{background:no-repeat url(../img/dot_red.png);background-position:0 13px}
+.talk_list .mylist .item .title{margin-top:15px}
+.talk_list .mylist .item .date{margin-top:4px;font-size:12px;color:#999}
+.talk_list .mylist .item .message{height:28px;padding-top:10px;font-size:13px;color:#666;text-indent:15px}
+
+.talk_list .mylist .flag-wrapper{height:20px}
+.talk_list .mylist .flag-wrapper span.flag{display:inline-block;width:10px;height:13px;margin-top:4px;border:0}
+.talk_list .mylist .flag-wrapper .flag-on{background-image:url(../img/flag_on.png);cursor:pointer}
+.talk_list .mylist .flag-wrapper .flag-active-mouse{background-image:url(../img/flag_active_mouse.png) !important;cursor:pointer}
+.talk_list .mylist .flag-wrapper .flag-hover{background-image:url(../img/flag_hover.png);cursor:pointer}
+.talk_list .mylist .flag-wrapper .flag-over-mouse{background-image:url(../img/flag_over_mouse.png) !important;cursor:pointer}
+
+.talk_list .mylist .reply{background:no-repeat url(../img/reply.png);background-position:0 13px}
+.talk_list .mylist .warning-left{position:absolute;margin:10px 0 0 15px;background-image:url(../img/warning_red.png);background-repeat:no-repeat;font-size:13px;color:#e55;text-indent:22px}
+.talk_list .mylist img.blank{background-image:none}
+
+.talk_list .mylist .row{margin-right:-15px;margin-left:-15px}
+.talk_list .mylist .row:after{display:table;clear:both;content:' '}
+
+.talk_list .mylist .left_area, .talk_list .mylist .right_area{float:left;position:relative;width:75%;min-height:1px;padding-right:15px;padding-left:15px}
+.talk_list .mylist .right_area{width:25%}
+.talk_list .mylist .text-danger{font-size:13px;color:#e55}
