@@ -10,6 +10,8 @@ a:hover{text-decoration:underline}
 iframe{overflow:hidden;margin:0;padding:0;border:0}
 .blind{position:absolute;overflow:hidden;clip:rect(0 0 0 0);margin:-1px;width:1px;height:1px}
 *, :after, :before{box-sizing: border-box;}
+.txt_red{color:#ee5555}
+.sub_txt{color:#999}
 
 html,body,#content{width:100%;height:100%;background-color:#eff0f2 !important}
 body{min-width:1240px;min-height:500px;height:100%;line-height:1.42857143;}
@@ -46,15 +48,42 @@ body{min-width:1240px;min-height:500px;height:100%;line-height:1.42857143;}
 .ly_wrap{width:900px;height:760px;position:absolute;top:50%;left:50%;margin:-380px 0 0 -450px;padding:40px 30px 50px;background-color:#fff}
 .ly_wrap h3{font-size:24px;font-weight:500}
 .ly_wrap .ly_con{margin-top:22px}
-.ly_wrap .ly_tab{overflow:hidden;height:52px;background-color:#bcc2ca;border:1px solid #bcc2ca;border-bottom:0}
-.ly_wrap .ly_tab li{float:left;width:280px;height:52px;margin-left:-1px}
-.ly_wrap .ly_tab li:first-child{margin-left:0}
-.ly_wrap .ly_tab li:first-child a{border-left:0}
-.ly_wrap .ly_tab li a{display:block;height:52px;text-align:center;background-color:#bcc2ca;border-left:1px solid #fff;font-size:16px;padding:15px;text-decoration:none;color:#fff}
-.ly_wrap .ly_tab li.on a{background-color:#fff;border-width:0;color:#333}
 .ly_wrap .noti_area{padding:30px 0;}
 .ly_wrap .noti_area li{margin-top:1px;height:22px!important;color:#666;background:url(../img/noti.png) 0 2px no-repeat;text-indent:22px;}
 .ly_wrap .ly_close{position:absolute;top:40px;right:30px;display:block;width:25px;height:25px;background:url(../img/btn_close.png) no-repeat;}
+.ly_wrap table{table-layout:fixed;width:100%;border-top:1px solid #333;border-spacing:0;border-collapse:collapse;}
+.ly_wrap th,.ly_wrap td{padding:20px;border-bottom:1px solid #e5e5e5}
+.ly_wrap th{font-size:14px;color:#333;background-color:#eff0f2}
+.ly_wrap td strong{display:block;font-size:16px;line-height:19px;margin:1px 0 12px}
+.ly_wrap td .sub_txt{font-size:13px;line-height:19px}
+.ly_wrap dl{overflow:hidden;margin:0 0 10px}
+.ly_wrap dt,.ly_wrap dd{float:left;margin:0 0 10px;line-height:34px}
+.ly_wrap dt{width:74px;}
+.ly_wrap dd{width:430px;}
+.ly_wrap select{height:34px;line-height:34px;background-color:#fff;border-color:#ccc}
+.ly_wrap select:disabled{background-color:#f4f4f4}
+.ly_wrap .date_box{position:relative;height:34px;display:inline-block;margin:0 4px 20px 0;vertical-align:middle;border: 1px solid #ccc;}
+.ly_wrap .time_box{display:inline-block;margin:0 0 20px;vertical-align:middle}
+.ly_wrap .date_box .inp_txt{width:96px;border:0;}
+.ly_wrap .date_box .btn_date{position:absolute;top:0;right:0;width:31px;height:32px;background:url(../img/calendar.png) no-repeat center center}
+.ly_wrap .txtarea{padding-bottom:0;border:0}
+.ly_wrap .txtarea textarea{width:100%;height:70px;padding:12px;margin:0 0 -11px;border-color:#ccc}
+.ly_wrap .inp_txt{padding:0 0 0 7px;line-height:32px;border:1px solid #ccc;width:300px;vertical-align:middle}
+.ly_wrap .ipt_box{overflow:hidden;margin:0 0 15px;}         
+.ly_wrap .ipt_box>*{float:left;}   
+.ly_wrap .alert{line-height:32px;margin-left:16px;color:#ee5555;font-size:13px}   
+.ly_wrap .ipt_box+.sub_txt{line-height:16px} 
+.ly_wrap .lst_td{padding:0 20px;height:363px}
+.ly_wrap .lst_td ul{overflow:hidden;display:inline-block;vertical-align:top;width:100%;height:100%}
+.ly_wrap .lst_td li{overflow:hidden;float:left;width:100%;padding:12px 0;border-bottom:1px solid #eee}
+.ly_wrap .lst_td li:last-child{color:#ee5555;border:0;font-size:13px}
+.ly_wrap .plus_id{float:left;line-height:34px;}
+.ly_wrap .btn_area{float:right;}
+
+/* 버튼 */
+.btn{display:inline-block;width:68px;height:34px;margin-bottom:0;font-size:14px;font-weight:400;line-height:34px;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;border-radius:2px;}
+.btn.blue{border:1px solid #5f84c8;color:#5f84c8;}
+.btn.blue.v2{background-color:#5f84c8;color:#fff}
 
 /* 상담 리스트 */
 .talk_list .mylist .pull-right{float:right!important}
@@ -93,3 +122,13 @@ body{min-width:1240px;min-height:500px;height:100%;line-height:1.42857143;}
 .talk_list .mylist .left_area, .talk_list .mylist .right_area{float:left;position:relative;width:75%;min-height:1px;padding-right:15px;padding-left:15px}
 .talk_list .mylist .right_area{width:25%}
 .talk_list .mylist .text-danger{font-size:13px;color:#e55}
+
+.modal{display:none;overflow-y:auto;position:fixed;top:0;right:0;bottom:0;left:0;z-index:9999;background:url(../images/common/bg/bg_dim.png);background:rgba(0,0,0,.5)}
+
+/* 공통tab */
+.ly_wrap .tabs{overflow:hidden;height:52px;background-color:#bcc2ca;border:1px solid #bcc2ca;border-bottom:0}
+.ly_wrap .tabs li{float:left;width:280px;height:52px;margin-left:-1px}
+.ly_wrap .tabs li:first-child{margin-left:0}
+.ly_wrap .tabs li:first-child a{border-left:0}
+.ly_wrap .tabs li a{display:block;height:52px;text-align:center;background-color:#bcc2ca;border-left:1px solid #fff;font-size:16px;padding:15px;text-decoration:none;color:#fff}
+.ly_wrap .tabs li a.on{background-color:#fff;border-width:0;color:#333}
