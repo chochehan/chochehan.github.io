@@ -132,3 +132,94 @@ body{min-width:1240px;min-height:500px;height:100%;line-height:1.42857143;}
 .ly_wrap .tabs li:first-child a{border-left:0}
 .ly_wrap .tabs li a{display:block;height:52px;text-align:center;background-color:#bcc2ca;border-left:1px solid #fff;font-size:16px;padding:15px;text-decoration:none;color:#fff}
 .ly_wrap .tabs li a.on{background-color:#fff;border-width:0;color:#333}
+
+/* 로그인 페이지 */
+.login{overflow:hidden;width:600px;height:496px;background-color:#fff;color:#333;position:relative;margin:0 auto;top:50%;transform:translateY(-50%);}
+.login h3{margin-top:67px;font-size:32px;text-align:center;font-weight:500;line-height:39px}
+.login .log_box{margin:40px 70px;} 
+.login .info{font-size:16px;margin-bottom:18px;line-height:19px}
+.login h3 span{color:#5f84c8;}
+.login form button {width:105px;height:55px;font-size:18px;font-weight:400;margin-left:10px;background-color:#5f84c8;border-radius:2px;color:#fff}
+.login .log_box li{margin:50px 0;}
+.login .log_box li:first-child{margin-top:0;padding-bottom:50px;border-bottom:1px solid #eee}
+.form-control{width:100%;height:34px;padding:6px 12px;background-color:#fff;background-image:none;
+border: 1px solid #ccc;border-radius:4px;}
+.login form input{float:left;width:345px!important;height:55px;font-size:18px;border-radius:unset;}
+.warning-left{position: absolute;color:#e55;font-size:13px;margin:10px 0 0;text-indent:22px;background-image:url(../img/warning_red.png);background-repeat:no-repeat;}
+
+/* 채팅영역 */
+.ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+#chat{position:relative;height:100%}
+
+/* 채팅_상단공지 */
+.chat_top_area{padding:10px 0;min-height:50px;position: absolute; top: 0; width: 100%; background-color: #fff; z-index: 10;border-bottom:1px solid #e5e5e5}
+.chat_top_area .chat_qna_area{margin-top:6px}
+.chat_top_area .chat_qna_area::after{display:block;clear:both;content:''}
+.chat_top_area .chat_qna_area .chat_noti_left .chat_noti_tit{color:#e55}
+.chat_top_area .chat_qna_area .chat_noti_left, .chat_top_area .chat_qna_area .chat_noti_right{position:relative;padding:0 15px;float:left;min-height:1px}
+.chat_top_area .chat_qna_area .chat_noti_left{width:83%}
+.chat_top_area .chat_qna_area .chat_noti_right{width:17%;text-align:right}
+.chat_top_area .chat_qna_area .chat_noti_right button{border:0;width: 17px; height: 18px;background:url(../img/drop_down.png) no-repeat 0 0;cursor:pointer}
+.chat_top_area .chat_info_more{display: none;line-height:18px;font-size:12px;color:#666;width:100%;padding:10px 0}
+.chat_top_area .chat_info_more > p{padding:0 16px;margin:0}
+
+/* 채팅_날짜선 */
+.chat_con li.chat_date{position: relative; width: 100%; margin-bottom: 20px; line-height: 13px; height: 13px}
+.chat_con li.chat_date .date_line{position: absolute;top: 6px; left: 14px; right: 14px; height: 1px; background-color: #e2e7ee}
+.chat_con li.chat_date .date_info{width: 100px; margin-left: -50px;  color: #888; background-color: #fff; position: absolute; top: 0; left: 50%; font-size: 11px; line-height: 13px; text-align: center;}
+
+/* 채팅_내용 */
+.chat_con{overflow-x: hidden; overflow-y: auto; height: calc(100% - 130px); position: absolute; top: 50px; padding-top:20px}
+.chat_con li{position: relative; margin-bottom:20px}
+.chat_con li .msg_left, .chat_con li .msg_right{padding: 0 60px 0 54px;position:relative;}
+.chat_con li .msg_left::after, .chat_con li .msg_right::after{display: block; width: 5px; height: 9px; position: absolute; top: 0; left: 49px;background: url(../img/left_tail.png) no-repeat;background-size: 5px 9px; content: ''}
+.chat_con li .msg_left .msg_left_name, .chat_con li .msg_right .msg_right_name{overflow: hidden; position: absolute; top: 0; left: 14px; width: 34px; height: 34px; line-height: 999px; font-size: 0; background: url(../img/chat_seller.png) no-repeat; background-size: 34px 34px}
+.chat_con li.chat_noti .msg_left .msg_left_name{background: url(../img/chat_noti.png) no-repeat; background-size: 34px 34px}
+.chat_con li .msg_left .msg_left_box, .chat_con li .msg_right .msg_right_box{position:relative;display:inline-block;max-width:100%;min-height:36px;border-radius:0 7px 7px 7px;color:#333;background-color:#f5f5f5;vertical-align:top;line-height:20px;word-wrap:break-word;padding:10px 12px}
+.chat_con li .inamin.msg_left::after, .chat_con li .inamin.msg_right::after{background:none}
+.chat_con li .msg_left .msg_left_box .msg_left_time, .chat_con li .msg_right .msg_right_box .msg_right_time{position: absolute; bottom: 0; right: -74px; width: 70px; font-size: 10px;color:#999; line-height: 12px}
+
+.chat_con li .msg_right{text-align: right; padding: 0 14px 0 80px}
+.chat_con li .msg_right::after{top: auto;left: auto;bottom: 0; right: 9px ;background:url(../img/right_tail.png) no-repeat;background-size: 5px 9px}
+.chat_con li .msg_right .msg_right_name{display:none}
+.chat_con li .msg_right .msg_right_box{text-align:left;border-radius: 7px 7px 0 7px; color: #fff; background-color: #6381c4}
+.chat_con li .msg_right .msg_right_box .msg_right_time{left:-48px;right:auto}
+
+.chat_con li.only_img .msg_left .msg_left_box,.chat_con li.only_img .msg_right .msg_right_box{padding:0}
+.chat_con li.only_img .bg_img{display: block;max-height: 240px; max-width: 220px; overflow: hidden; background-repeat: no-repeat; min-width: 100px; min-height: 100px; background-size: cover; background-position: center center}
+
+/* 채팅_입력 */
+.chat-message {position:absolute;bottom:0;background-color: #fff}
+.chat-message .typingbar{height: 80px}
+.chat-message .typingbar .input-group{position: relative; display: table; border-collapse:
+}
+.chat-message .typingbar .input-group .input-group-btn{position: relative; font-size: 0; white-space: nowrap; width: 1%; vertical-align: middle;display: table-cell;}
+.chat-message .typingbar .input-group .input-group-btn .btn{display: inline-block; padding: 6px 12px; font-size: 14px; font-weight: 400; line-height: 1.4; text-align: center; white-space: nowrap;vertical-align: middle; cursor: pointer;background-image: none; border:1px solid transparent;border-radius:4px}
+.chat-message .typingbar .input-group .input-group-btn .upload, .chat-message .typingbar .input-group .input-group-btn .send{width: 27px; height: 23px;background: url(../img/bg_upload.png) no-repeat; margin: 13px 10px 18px 13px}
+.chat-message .typingbar .input-group .input-group-btn .send{width: 27px; height: 23px;background: url(../img/bg_send.png) no-repeat; margin: 13px 13px 18px}
+
+.chat-message .typingbar .form-control{display: table-cell; position: relative; z-index: 2; float: left; width: 100%; margin-bottom: 0}
+.chat-message .typingbar .message-box{font-size: 14px; margin: 10px 0; padding: 0; border: 0; outline:none;box-shadow: none; resize: none}
+
+
+#chat #messageContent::-webkit-input-placeholder {
+  color: #cecece;
+}
+#chat #messageContent:-ms-input-placeholder {
+  color: #cecece;
+}
+#chat #messageContent:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+#chat #messageContent:focus:-ms-input-placeholder {
+  color: transparent;
+}
+#chat .typingbar .message-box::-moz-placeholder {
+  line-height: 400%;
+}
+#chat .typingbar .message-box:-ms-input-placeholder {
+  line-height: 300%;
+}
+#chat .typingbar .message-box::-webkit-input-placeholder {
+  line-height: 400%;
+}
