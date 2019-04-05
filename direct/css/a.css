@@ -91,7 +91,7 @@ body{min-width:1240px;min-height:500px;height:100%;line-height:1.42857143;}
 .talk_list .mylist .ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .talk_list .mylist .button{cursor:pointer}
 .talk_list .mylist .separator{width:100%;height:1px;margin:0;padding:0;background-color:#e5e5e5}
-
+.talk_list .mylist li:last-child .separator{display:none}
 .talk_list{overflow:hidden;position:relative;height:calc(100% - 100px);line-height:1.4;line-height:16px}
 .talk_list .mylist{display:block;overflow:hidden scroll;position:relative!important;width:100%;height:100%;padding-right:20px;box-sizing:content-box}
 
@@ -247,3 +247,9 @@ border: 1px solid #ccc;border-radius:4px;}
 .opt_box{float:left;padding-left:15px;line-height:32px}
 .ckbox{vertical-align:1px;}
 .ckbox+label{margin-right:12px;}
+
+/* 최근상담내역 */
+.ico_plus{float:right;display:block;width:17px;height:17px;background:url(../img/ico_plus.png) no-repeat}
+#tab4.talk_list,#tab5.talk_list{height: calc(100% - 50px);}
+
+
