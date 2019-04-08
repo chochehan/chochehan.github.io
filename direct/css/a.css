@@ -252,4 +252,23 @@ border: 1px solid #ccc;border-radius:4px;}
 .ico_plus{float:right;display:block;width:17px;height:17px;background:url(../img/ico_plus.png) no-repeat}
 #tab4.talk_list,#tab5.talk_list{height: calc(100% - 50px);}
 
+/* 최근 구매 내역 */
+.rcnt_buy .mylist .item .item-box{padding:24px 17px 22px}
+.rcnt_buy .mylist .item .item-box .chat_top_area{position:relative;border-bottom:0;padding:0;min-height: inherit;}
+.rcnt_buy .mylist .item .item-box .chat_top_area .chat_qna_area .chat_noti_left,.rcnt_buy .mylist .item .item-box .chat_top_area .chat_qna_area .chat_noti_right{padding:0}
 
+.rcnt_buy .mylist .item .item-box .rct_tit{ font-size: 13px; color: #666}
+.rcnt_buy .mylist .item .item-box .rct_tit strong{font-weight: normal; color: #e55}
+.rcnt_buy .mylist .item .item-box .rct_tit .separator-x{margin: 0 3px}
+
+.rcnt_buy .rcnt_buy_more .detail_box{background-color:#f8f8f8;padding:14px 12px;margin-top:20px}
+.rcnt_buy .rcnt_buy_more .detail_box li{color:#666;font-size:12px;padding-left:10px;position:relative; margin-top: 10px}
+.rcnt_buy .rcnt_buy_more .detail_box li:first-child{margin-top:0}
+.rcnt_buy .rcnt_buy_more .detail_box li::before{display:block; content:''; width: 2px; height: 2px; background-color: #666; position: absolute; top:7px; left:3px}
+.rcnt_buy .rcnt_buy_more .detail_box li .separator-x{margin:0 2px !important;height: 9px !important}
+
+
+.rcnt_buy .rcnt_buy_more .info_box{font-size:12px;line-height:20px;margin-top:25px}
+.rcnt_buy .rcnt_buy_more .info_box dt{float:left;margin-right:3px}
+.rcnt_buy .rcnt_buy_more .info_box dd{overflow:hidden;color:#666}
+.rcnt_buy .rcnt_buy_more .info_box dd span{color:#5f84c8}
