@@ -12,16 +12,16 @@ iframe{overflow:hidden;margin:0;padding:0;border:0}
 *, :after, :before{box-sizing: border-box;}
 .txt_red{color:#ee5555}
 .sub_txt{color:#999}
-strong,b, h3{font-weight:500 !important}
+strong,b{font-weight:500 !important}
 
 /* 레이아웃 */
 html,body,#content{overflow:hidden;width:100%;height:100%;background-color:#eff0f2 !important}
-#gnb{position:fixed;top:0;left:0;right:0}
+#gnb{position:fixed;top:0;left:0;right:0;z-index:9999}
 .con_box{width:50%;height:100%;float:left;overflow:scroll}
 .con_box.l_con{height:calc(100% - 45px);margin-top:45px}
-.con_box.r_con{height:calc(100% - 111px);margin-top:45px}
+.con_box.r_con{height:calc(100% - 111px);margin-top:45px;border-left:1px solid #ddd}
 .con_box img{width:100%;}
-#buy_section{position:fixed;left:50%;right:0;bottom:0;height:50px;background-color:red}
+#buy_section{position:fixed;left:50%;right:0;bottom:0;height:50px;z-index:99}
 
 
 
@@ -79,13 +79,13 @@ a.btn[class*=_large]{line-height:45px}
 .deal_header a[class*=btn_].btn_cart em{position:absolute;min-width:7px;top:0;right:4px;padding:0 4px;border-radius:8px;background:#e55;font-weight:700;font-size:11px;line-height:15px;white-space:nowrap;text-align:center;color:#fff;-webkit-transform:translate(50%,0);transform:translate(50%,0)}
 .deal_header a[class*=btn_]>span{color:transparent!important;font-size:1px;line-height:0}
 .deal_header.base_header{position:fixed;height:45px;border-bottom:1px solid #ddd;background:#fff;z-index:101}
-.deal_header.base_header h2{padding-left:42px;font-size:20px;line-height:28px;letter-spacing:-.5px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.deal_header.base_header h2{padding-left:42px;font-size:20px;font-weight:400;line-height:28px;letter-spacing:-.5px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .deal_header.base_header a.btn_history{background-position:0 100%}
 .deal_header.base_header a.btn_search{background-position:-50px 100%}
 .deal_header.base_header a.btn_cart{background-position:-100px 100%}
 
 /* 구매버튼영역 */
-.btn_bt_opt{position:absolute;right:0;bottom:0;left:0;padding:10px;border-top:1px solid #e0e0e0;background:#fff;z-index:150}
+.btn_bt_opt{position:absolute;right:0;bottom:0;left:0;padding:10px;border-top:1px solid #e0e0e0;background:#fff;z-index:150;border-left:1px solid #ddd}
 .btn_bt_opt .btn_wrap{margin:0 -6px}
 .btn_bt_opt .btn_wrap ul{border-spacing:6px 0}
 .btn_bt_opt .btn_wrap ul li{vertical-align:top}
@@ -97,11 +97,281 @@ a.btn[class*=_large]{line-height:45px}
 .btn_bt_opt .btn_wrap ul li.btn_fix a.btn_share:after{width:13px;height:16px;margin-left:-7px;background-position:-13px -37px;opacity:.59}
 .btn_bt_opt .btn_wrap ul li.btn_order{padding-right:3px}
 
-/* 반응형 */
-@media screen and (max-width: 720px) {
+.prd_info{margin-bottom:7px}
+.prd_img_wrap{position:relative;overflow:hidden}
+.prd_img_wrap .prd_img{position:relative;display:-webkit-box;display:-webkit-flex;display:flex}
+.prd_img_wrap .prd_img>*{width:100%;-webkit-flex-shrink:0;flex-shrink:0}
+.prd_img_wrap .prd_img .img{height:0;padding-bottom:100%;background:#f5f5f5 url(https://image.wemakeprice.com/images/resources_v2/mobile/common/img_prd_dft.png) 50% 50% no-repeat;background-size:23.4%}
+.prd_img_wrap .indicator{position:absolute;width:100%;height:10px;bottom:14px;left:0;text-align:center;z-index:100!important;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.prd_img_wrap .indicator span{display:inline-block;width:8px;height:8px;margin:1px 4px;border-radius:50%;background:rgba(255,255,255,.8);vertical-align:top;-webkit-box-shadow:0 0 3px rgba(155,155,155,.8);box-shadow:0 0 3px rgba(155,155,155,.8);color:transparent!important;font-size:1px;line-height:0}
+.prd_img_wrap .indicator span.on{background:rgba(0,0,0,.6);-webkit-box-shadow:none;box-shadow:none}
+.prd_tit_wrap{position:relative;padding:13px 15px 8px;background:#fff}
+.prd_tit_wrap .prd_label{height:16px;margin-bottom:7px;overflow:hidden}
+.prd_tit_wrap .prd_label>img{float:left;margin-right:3px;width:auto;height:16px}
+.prd_tit_wrap .prd_label .label_w{float:left;margin-right:3px;padding:1px 4px 0;border:1px solid #ddd;background:#fff;font-size:10px;line-height:13px;color:#999}
+.prd_tit_wrap .prd_tit{margin-bottom:5px;font-size:22px;line-height:normal;font-weight:normal}
+.prd_tit_wrap .prd_price_wrap{line-height:23px}
+.prd_tit_wrap .prd_price_wrap em,.prd_tit_wrap .prd_price_wrap span{vertical-align:top}
+.prd_tit_wrap .prd_price_wrap .base_price{margin-bottom:-5px;color:#a9a9a9}
+.prd_tit_wrap .prd_price_wrap .base_price .price_tit{font-weight:700;font-size:13px}
+.prd_tit_wrap .prd_price_wrap .base_price .price_num{color:#aaa;font-size:11px;letter-spacing:-.5px}
+.prd_tit_wrap .prd_price_wrap .base_price .price_num em{font-size:13px;text-decoration:line-through}
+.prd_tit_wrap .prd_price_wrap .total_price .price_tit{font-size:13px;letter-spacing:-.5px}
+.prd_tit_wrap .prd_price_wrap .total_price .price_num{font-weight:700;font-size:17px}
+.prd_tit_wrap .prd_price_wrap .total_price .price_num em{font-weight:inherit;font-size:20px;line-height:21px;vertical-align:top}
+.prd_tit_wrap .prd_price_wrap .total_price .price_num .price_txt{margin-left:-4px}
+.prd_tit_wrap .prd_price_wrap.discount .base_price .price_tit{font-weight:400;font-size:13px}
+.prd_tit_wrap .prd_price_wrap.discount .total_price .price_num{color:#e55}
+.prd_tit_wrap .prd_buy_info{position:absolute;right:15px;bottom:10px;color:#aaa}
+.prd_tit_wrap .typical_desc{font-size:11px;line-height:14px;letter-spacing:-.5px;color:#aaa}
+.prd_tit_wrap .typical_desc:not(:empty)~.prd_buy_info{bottom:24px}
+.prd_etc_info{font-size:14px;line-height:20px}
+.prd_etc_info>div{position:relative;margin-top:-1px;padding:13px 15px 11px;border:1px solid #ededed;border-width:1px 0;background:#fff}
+.prd_etc_info>div a{display:block}
+.prd_etc_info>div.coupon_info{color:#e55;cursor:pointer;padding:0}
+.prd_etc_info>div.coupon_info:after{content:'';position:absolute;width:8px;height:8px;top:50%;right:15px;margin-top:-4px;border:1px solid #999;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg);pointer-events:none}
+.prd_etc_info>div.coupon_info a{padding:13px 15px 11px}
+.prd_etc_info>div.coupon_info a:before{content:'';display:inline-block;width:20px;height:14px;margin-top:3px;margin-right:3px;background:url(https://image.wemakeprice.com/images/resources_v2/mobile/deal/deal.png) 0 -55px no-repeat;background-size:100px;vertical-align:top}
+.prd_etc_info>div.release_info{padding:10px 15px 9px;font-size:12px;line-height:15px}
+.prd_etc_info>div.release_info>span.deli_type{color:#e55}
+.prd_etc_info>div.release_info>span~span{margin-left:0;padding-left:4px}
+.prd_etc_info>div.release_info>span~span:before{height:10px}
+.prd_etc_info>div>span~span{position:relative;margin-left:2px;padding-left:8px}
+.prd_etc_info>div>span~span:before{content:'';position:absolute;width:1px;height:12px;top:2px;left:0;background:#ddd}
+.prd_etc_info .benefit_info,.prd_etc_info .noint_info{padding:0;cursor:pointer}
+.prd_etc_info .benefit_info:after,.prd_etc_info .noint_info:after{content:'';position:absolute;width:8px;height:8px;top:50%;right:15px;margin-top:-4px;border:1px solid #999;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);transform:rotate(45deg);pointer-events:none}
+.prd_etc_info .benefit_info a,.prd_etc_info .noint_info a{padding:13px 15px 11px}
+.prd_etc_info .limit_info{padding:10px 15px 9px;font-size:12px;line-height:15px}
+.prd_etc_info .limit_info>span.deli_type{color:#e55}
+.prd_etc_info .limit_info>span~span{margin-left:0;padding-left:4px}
+.prd_etc_info .limit_info>span~span:before{height:10px}
+
+.with_prd{margin-bottom:7px;background:#fff}
+.with_prd h4{box-sizing:content-box;padding:10px 15px;font-weight:700;font-size:14px;line-height:17px;color:#333}
+.with_prd .with_con{padding:15px 15px 14px;border-top:1px solid #ddd;border-bottom:1px solid #f5f5f5;overflow:auto}
+.with_prd .with_con ul{display:-webkit-box;display:-webkit-flex;display:flex}
+.with_prd .with_con ul>*{width:100%;-webkit-flex-shrink:0;flex-shrink:0}
+.with_prd .with_con ul li{width:130px;height:195px}
+.with_prd .with_con ul li~li{margin-left:10px}
+.with_prd .with_con ul li a{display:block;color:#333;font-size:12px}
+.with_prd .with_con .with_img{position:relative;height:0;width:130px;height:130px}
+.with_prd .with_con .with_img img{position:absolute;height:100%;top:0;left:0}
+.with_prd .with_con .with_info{margin-top:10px}
+.with_prd .with_con .with_info .with_tit{height:30px;line-height:15px;overflow:hidden}
+.with_prd .with_con .with_info .with_price{margin-top:4px;line-height:21px}
+.with_prd .with_con .with_info .with_price strong{margin-right:1px;font-size:16px;vertical-align:baseline}
+
+/* 탭영역 */
+.deal_tab{position:relative;overflow:hidden;height:49px;}
+.deal_tab ul{display:table;width:100%;table-layout:fixed}
+.deal_tab ul li{display:table-cell;height:49px;border-bottom:1px solid #e7e7e7;background:#fff;vertical-align:middle}
+.deal_tab ul li .tab{display:block;font-size:15px;font-weight:700;text-align:center;line-height:18px;letter-spacing:-.5px}
+.deal_tab ul li .tab em{display:block;color:#aaa;font-size:10px;font-weight:400;line-height:1.2}
+.deal_tab ul li.on{position:relative;position:-webkit-sticky;position:sticky}
+.deal_tab ul li.on a{color:#e55}
+.deal_tab ul li.on:after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:3px;background-color:#e55}
+.deal_tab.sticky{position:fixed;position:-webkit-sticky;position:sticky;top:0;left:0;right:0;z-index:100}
+.ts-controls{display: none}
+
+.sorting_tab{display:table;width:100%;table-layout:fixed}
+.sorting_tab li{background-color:#f5f5f5;display:table-cell;border-bottom:1px solid #ededed;line-height:40px}
+.sorting_tab li:first-child{border-left:1px solid #ddd}
+.sorting_tab li .tab{display:block;border-left:0;margin-left:-1px;border:1px solid #ddd;border-left:0;border-bottom:0;font-size:13px;color:#c3c3c3;font-weight:700;letter-spacing:-.5px;text-align:center}
+.sorting_tab li .tab span{padding-left:6px;font-size:11px;vertical-align:1px;font-weight: normal}
+.sorting_tab li.on{background-color:#fff;border-bottom-color:#fff}
+.sorting_tab li.on .tab{position:relative;border-color:#999;color:#e55}
+.sorting_tab li.on .tab:after{content:'';position:absolute;left:0;right:-1px;top:-1px;bottom:-1px;border:1px solid #999;border-bottom:none}
+
+.review_cnt .opt{margin-top:2px;height:18px;color:#334a64;font-size:12px;line-height:18px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.review_cnt .post{font-size:14px;line-height:19px}
+.review_cnt .thumb{display:inline-block;margin-top:12px}
+.review_cnt .thumb img{vertical-align:top;width:180px;height:180px}
+.review_cnt .name{float:left;color:#666;font-size:14px;line-height:16px;font-weight:700}
+.review_cnt .time{color:#999}
+
+.rating_star,.rating_star i{float:left;display:inline-block;width:94px;height:16px;background:url(https://image.wemakeprice.com/images/resources_v2/mobile/common/rating_star.png) no-repeat;background-size:145px 138px;vertical-align:top}
+.rating_star{background-position:0 -56px}
+.rating_star i{color:transparent!important;font-size:1px;line-height:0;background-position:0 -73px}
+.rating_star.sm{width:70px;height:12px;background-position:0 -90px}
+.rating_star.sm i{height:12px;background-position:0 -103px}
+.rating_star.xs{width:60px;height:10px;background-position:0 -116px}
+.rating_star.xs i{height:10px;background-position:0 -127px}
+.rating_star.big{width:145px;height:28px;background-position:0 0}
+.rating_star.big i{height:28px;background-position:0 -28px}
+
+.review{padding:0 15px;background-color:#fff}
+.review .prd_sel~.rating{padding-top:0}
+.review .prd_sel~.no_list,.deal_cnt .review .prd_sel~div[data-role=reviewList] .no_list{padding-top:0}
+.review .sorting_wrap li{background-color:#f5f5f5}
+.review .sorting_wrap .on{background-color:#fff}
+.review .review_notice{margin-bottom:27px;padding:8px 0;background-color:#ededed;color:#aaa;font-size:11px;line-height:15px;text-align:center;letter-spacing:-.5px}
+.review .rating{padding:17px 0 27px 0;text-align:center}
+.review .rating:after{clear:both;display:table;content:''}
+.review .rating>div{display:inline-block;height:33px;vertical-align:top}
+.review .rating .btn,.deal_cnt .review .rating span:not(.rating_star){float:left}
+.review .rating .rating_star{margin-top:7px}
+.review .rating .grade{float:left;margin:0 12px 0 9px;color:#ffb400;font-size:16px;line-height:34px;font-weight:700;letter-spacing:-.5px}
+.review .rating .btn{width:120px;font-weight:400}
+.review .no_list{padding:12px 0}
+.review .no_list p{padding:58px 0 130px}
+.pop_review_detail .review_list,.review .review_list{padding-bottom:25px}
+.pop_review_detail .review_list .sorting_radio:after,.review .review_list .sorting_radio:after{clear:both;display:table;content:''}
+.pop_review_detail .review_list .sorting_radio .inner,.review .review_list .sorting_radio .inner{float:right;display:inline-block;margin-top:13px;margin-bottom:5px}
+.pop_review_detail .review_list .sorting_radio label,.review .review_list .sorting_radio label{float:left;margin-left:8px}
+.pop_review_detail .review_list .sorting_radio label:first-child,.review .review_list .sorting_radio label:first-child{margin-left:0}
+.pop_review_detail .review_list>ul>li,.review .review_list>ul>li{padding:11px 0 22px;border-bottom:1px solid #ededed}
+.pop_review_detail .review_list>ul>li .review_tlt,.review .review_list>ul>li .review_tlt{position:relative}
+.pop_review_detail .review_list>ul>li .review_tlt:after,.review .review_list>ul>li .review_tlt:after{clear:both;display:table;content:''}
+.pop_review_detail .review_list>ul>li .review_tlt .name,.review .review_list>ul>li .review_tlt .name{margin-top:-2px;margin-left:6px}
+.pop_review_detail .review_list>ul>li .review_tlt .review_btn,.review .review_list>ul>li .review_tlt .review_btn{position:absolute;top:-8px;right:0}
+.pop_review_detail .review_list>ul>li .review_tlt .review_btn a,.review .review_list>ul>li .review_tlt .review_btn a{position:relative;display:block;padding:7px 0 7px 30px;color:#666;font-size:13px;line-height:18px;letter-spacing:-.5px}
+.pop_review_detail .review_list>ul>li .review_tlt .review_btn a:before,.review .review_list>ul>li .review_tlt .review_btn a:before{content:'';position:absolute;top:10px;left:10px;width:13px;height:12px;background:url(https://image.wemakeprice.com/images/resources_v2/mobile/deal/deal.png) 0 0 no-repeat;background-size:100px}
+.pop_review_detail .review_list>ul>li .review_tlt .review_btn a.share:before,.review .review_list>ul>li .review_tlt .review_btn a.share:before{top:8px;height:14px;background-position:0 -13px}
+.pop_review_detail .review_list>ul>li .review_cnt .opt,.review .review_list>ul>li .review_cnt .opt{margin-top:10px}
+.pop_review_detail .review_list>ul>li .review_cnt .post,.review .review_list>ul>li .review_cnt .post{margin-top:2px}
+.pop_review_detail .review_list>ul>li .review_info .time,.review .review_list>ul>li .review_info .time{float:right}
+.pop_review_detail .review_list .no_list,.review .review_list .no_list{padding-top:12px}
+.pop_review_detail .review_info,.review .review_info{margin-top:17px}
+.pop_review_detail .review_info span,.review .review_info span{color:#999;line-height:18px}
+.pop_review_detail .review_info .like_count,.review .review_info .like_count{margin-left:2px;font-size:14px}
+.pop_review_detail .review_info .btn_like,.review .review_info .btn_like{display:inline-block;width:21px;height:18px;background:url(https://image.wemakeprice.com/images/resources_v2/mobile/deal/deal.png) no-repeat;background-position:-13px 0;background-size:100px;vertical-align:top;border:0}
+.pop_review_detail .review_info .btn_like.on,.review .review_info .btn_like.on{background-position:-13px -18px}
+.pop_review_detail .review_info{position:relative;margin-top:0;padding:20px 15px 17px;text-align:right}
+.pop_review_detail .review_info .btn_like{position:relative}
+.pop_review_detail .review_info .btn_like:after{content:'';position:absolute;top:100%;left:50%;margin-left:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:8px solid #21acdd}
+.pop_review_detail .review_info .btn_like.on:after,.pop_review_detail .review_info .btn_like.on~.balloon{display:none}
+.pop_review_detail .review_info .balloon{display:block;position:absolute;bottom:-15px;right:17px;padding:0 12px;color:#fff;font-size:10px;font-weight:700;line-height:25px;background-color:#21acdd;z-index:2;-webkit-border-radius:9999px;-moz-border-radius:9999px;border-radius:9999px}
+.pop_review_detail .review_info .balloon i{display:inline-block;position:relative;top:8px;width:11px;height:9px;background:url(https://image.wemakeprice.com/images/resources_v2/mobile/deal/deal.png) no-repeat;background-size:100px;background-position:0 -70px;vertical-align:top;color:transparent!important;font-size:1px;line-height:0}
+.pop_review_detail .prd_info{position:relative;margin:0 -15px;padding:14px 15px;border:1px solid #ededed;border-width:1px 0 1px 0;background-color:#f5f5f5}
+.pop_review_detail .prd_info .title{font-size:14px;line-height:18px}
+.pop_review_detail .prd_info .opt{margin-top:4px;font-size:11px;line-height:14px}
+.pop_review_detail .review_cnt{padding:0 15px}
+.pop_review_detail .review_cnt .post{margin-top:12px}
+.pop_review_detail .review_cnt .thumb{margin-top:18px}
+.pop_review_detail .review_cnt .name{margin-left:0}
+.pop_review_detail .review_write{margin-top:49px;padding-bottom:30px}
+.pop_review_detail .review_write .time{margin-left:15px}
+.pop_review_report .inner,.pop_review_report .pop_contents{padding:0 15px 15px}
+.pop_review_report .pop_contents p,.pop_review_report.pop_contents p{padding:18px 0 21px;color:#999;font-size:13px;line-height:17px}
+.pop_review_report .report_list{border:1px solid #ddd}
+.pop_review_report .report_list li{border-top:1px solid #ddd}
+.pop_review_report .report_list li:first-child{border-top:none}
+.pop_review_report .report_list li label{position:relative;display:block;height:45px}
+.pop_review_report .report_list li label span{float:none;position:absolute;top:0;bottom:0;left:0;right:0;padding-left:55px;line-height:45px;font-size:14px}
+.pop_review_report .report_list li label i{z-index:1;margin-left:15px;margin-top:10px;background-color:#fff}
+.pop_review_report .report_list li label input:checked~span{background-color:#f5f5f5}
+.pop_review_report .textarea{margin-top:15px;font-size:13px}
+.pop_review_report .btn_wrap{margin-top:20px}
+
+.select_box{display:inline-block;position:relative;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.select_box.disabled .select_title{background:#f5f5f5;color:#c3c3c3}
+.select_box .select_title{display:block;width:100%;height:33px;padding:0 26px 0 10px;border:1px solid#ddd;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background-color:#fff;overflow:hidden}
+.select_box .select_title:disabled{background-color:#f5f5f5;color:#c3c3c3}
+.select_box:after{content:'';position:absolute;width:7px;height:7px;top:50%;right:12px;margin-top:-3px;border:1px solid #999;border-width:1px 1px 0 0;-webkit-transform:rotate(135deg);transform:rotate(135deg);pointer-events:none}
+.select_box:after{top:14px}
+.select_box.on:after{top:14px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);margin-top:0}
+.select_box .opt_list{display:none;border-bottom:1px solid #ddd;background-color:#fff}
+.select_box .opt_list li{border:1px solid#ddd;border-width:0 1px;line-height:18px}
+.select_box .opt_list li.disabled{color:#c3c3c3}
+.select_box .opt_list li.disabled a{cursor:default}
+.select_box .opt_list li a{display:block;padding:7px 10px}
+.select_box.on .opt_list{display:block}
+.select_box a.select_title{line-height:32px}
+.select_box.sm:after{top:11px}
+.select_box.sm .select_title{height:28px;font-size:11px}
+.select_box.sm a.select_title{line-height:28px}
+.select_box.sm.on:after{top:15px}
+.select_box.sm .opt_list li{font-size:11px;line-height:15px}
+.select_box.sm .opt_list li a{padding:6px 10px}
+.select_box.large:after{top:16px}
+.select_box.large .select_title{height:37px;font-size:15px}
+.select_box.large a.select_title{line-height:37px}
+.select_box.large.on:after{top:18px}
+.select_box.large .opt_list li{font-size:15px}
+.select_box.large .opt_list li a{padding:11px 10px 10px}
+.select_box.gray .opt_list{background-color:#f5f5f5}
+.select_box.gray .opt_list li~li{border-top-width:1px}
+.quantity{position:relative;display:inline-block;width:104px;height:33px;padding:0 31px;background-color:#fff;border:1px solid#ddd;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;overflow:hidden}
+.quantity input{border:none;width:100%;background:#fff;color:#333;font-size:14px;line-height:33px;letter-spacing:-.5px;vertical-align:top;text-align:center}
+.quantity button{position:absolute;width:31px;height:100%;top:0;border:0;background:none}
+.quantity button:before{content:'';position:absolute;left:8px;top:15px;width:15px;height:1px;background-color:#999}
+.quantity button.disabled{cursor:default}
+.quantity button.disabled:after,.quantity button.disabled:before{background-color:#ddd}
+.quantity .btn_qnt_minus{left:0;border-right:1px solid#ddd}
+.quantity .btn_qnt_plus{right:0;border-left:1px solid#ddd}
+.quantity .btn_qnt_plus:after{content:'';position:absolute;top:8px;left:15px;width:1px;height:15px;background-color:#999}
+.quantity.small{width:83px;height:25px;padding:0 23px}
+.quantity.small input{font-size:12px;line-height:25px}
+.quantity.small button{width:23px}
+.quantity.small button:before{left:6px;top:11px;width:11px;height:1px}
+.quantity.small .btn_qnt_plus:after{top:6px;left:11px;width:1px;height:11px}
+
+.bt_opt_layer{position:absolute;right:0;bottom:-350px;left:0;padding:10px;border-top:1px solid #c3c3c3;background:#fff;z-index:160;opacity:0;-webkit-transition:bottom .3s;transition:bottom .3s}
+.bt_opt_layer .btn_opt_tg{position:absolute;width:66px;height:23px;top:-22px;left:50%;margin-left:-33px;background:url(https://image.wemakeprice.com/images/resources_v2/mobile/deal/deal.png) 100% -92px no-repeat;background-size:100px}
+.bt_opt_layer .btn_opt_tg span{position:absolute;width:15px;height:8px;top:50%;left:50%;margin:-5px 0 0 -8px;overflow:hidden;color:transparent!important;font-size:1px;line-height:0}
+.bt_opt_layer .btn_opt_tg span:after,.bt_opt_layer .btn_opt_tg span:before{content:'';position:absolute;width:1px;height:10px;bottom:-1px;background:#e55}
+.bt_opt_layer .btn_opt_tg span:before{left:3px;-webkit-transform:rotate(-55deg);transform:rotate(-55deg)}
+.bt_opt_layer .btn_opt_tg span:after{right:3px;-webkit-transform:rotate(55deg);transform:rotate(55deg)}
+.bt_opt_layer .opt_scr_wrap{position:relative;max-height:500px;margin-right:-10px;padding-right:10px;overflow:hidden}
+.bt_opt_layer .opt_scr_wrap .limit_txt{margin-top:-3px;margin-bottom:6px;font-size:11px;line-height:18px;color:#7e849e;text-align:center}
+.bt_opt_layer .opt_scr_wrap .btn_ip_pop{position:absolute;top:0;right:0;bottom:0;left:0}
+.bt_opt_layer .opt_scr_wrap .frm_area .btn_frm,.bt_opt_layer .opt_scr_wrap .frm_area .ip_wrap,.bt_opt_layer .opt_scr_wrap .frm_area .select_box{margin-bottom:5px}
+.bt_opt_layer .opt_scr_wrap .frm_area .ip_wrap{position:relative}
+.bt_opt_layer .opt_scr_wrap .frm_area .ip_wrap .input:read-only{color:#333}
+.bt_opt_layer .opt_scr_wrap .frm_area .swiper-scrollbar{display:none}
+.bt_opt_layer .opt_scr_wrap .frm_area .btn_frm{overflow:hidden}
+.bt_opt_layer .opt_scr_wrap .frm_area .btn_frm button{float:right;margin-top:2px;width:auto;padding:0 15px;font-weight:400}
+.bt_opt_layer .opt_scr_wrap .frm_area .select_title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bt_opt_layer .opt_scr_wrap .slt_list li{padding:7px 10px 10px;background:#f9f9f9;font-size:12px;line-height:18px;color:#999}
+.bt_opt_layer .opt_scr_wrap .slt_list li .slt_val{font-size:13px}
+.bt_opt_layer .opt_scr_wrap .slt_list li .slt_num{margin-top:2px;overflow:hidden}
+.bt_opt_layer .opt_scr_wrap .slt_list li .slt_num .quantity{float:left}
+.bt_opt_layer .opt_scr_wrap .slt_list li .slt_num .quantity .btn_ip_pop{right:31px;left:31px}
+.bt_opt_layer .opt_scr_wrap .slt_list li .slt_num .opt_price{height:25px;margin-top:8px;font-size:13px;line-height:25px;color:#666;text-align:right;overflow:hidden}
+.bt_opt_layer .opt_scr_wrap .slt_list li .slt_num .opt_price strong{font-size:15px;line-height:24px;vertical-align:top}
+.bt_opt_layer .opt_scr_wrap .slt_list li .slt_num .opt_price .btn_del{margin-left:5px;background:#fff;vertical-align:top}
+.bt_opt_layer .opt_scr_wrap .slt_list li~li{margin-top:5px}
+.bt_opt_layer .prd_sum{padding:2px 0 4px;line-height:28px;color:#000;text-align:right}
+.bt_opt_layer .prd_sum .sum_tit{display:inline-block;font-size:13px;vertical-align:top}
+.bt_opt_layer .prd_sum .sum_num{display:inline-block;margin-left:10px;font-size:18px;vertical-align:top}
+.bt_opt_layer .prd_sum .sum_num strong{font-size:20px;line-height:26px;vertical-align:baseline}
+.bt_opt_layer .select_box:not(.thumb) .opt_list{border:none}
+.bt_opt_layer .select_box.thumb .opt_list li{border:none!important}
+.bt_opt_layer .select_box.thumb .opt_list li a{position:relative;height:65px;padding:11px 10px 10px 65px}
+.bt_opt_layer .select_box.thumb .opt_list li a .thumb_img{position:absolute;width:43px;height:43px;top:10px;left:10px;border:1px solid #d6d6d6}
+.bt_opt_layer .select_box.thumb .opt_list li a .thumb_img img{height:100%}
+.bt_opt_layer .select_box.thumb .opt_list li a .prd_tit{display:-webkit-box;height:28px;font-size:12px;line-height:14px;color:#999;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bt_opt_layer .select_box.thumb .opt_list li a .prd_price{font-weight:700;font-size:13px;line-height:15px}
+.bt_opt_layer .select_box.thumb .opt_list li.disabled .thumb_img .soldout{position:absolute;top:0;right:0;bottom:0;left:0;padding-top:12px;background:rgba(0,0,0,.4);font-weight:700;font-size:11px;line-height:11px;color:#fff;text-align:center}
+.bt_opt_layer .select_box.thumb .opt_list li.disabled .prd_price,.bt_opt_layer .select_box.thumb .opt_list li.disabled .prd_tit{color:#c3c3c3}
+.bt_opt_layer.on{bottom:0}
+.bt_opt_layer.opacity{opacity:1}
+.bt_opt_layer.slt .opt_scr_wrap{max-height:none}
+.bt_opt_layer.slt .opt_scr_wrap .frm_area .btn_frm,.bt_opt_layer.slt .opt_scr_wrap .frm_area .input,.bt_opt_layer.slt .opt_scr_wrap .frm_area .select_box{display:none}
+.bt_opt_layer.slt .opt_scr_wrap .frm_area .select_box.on{display:block;margin-bottom:0;border:1px solid #ddd}
+.bt_opt_layer.slt .opt_scr_wrap .frm_area .select_box.on .select_title{border:none;border-bottom:1px solid #c3c3c3}
+.bt_opt_layer.slt .opt_scr_wrap .frm_area .select_box.on .list_wrap{position:relative;height:244px;overflow:hidden}
+.bt_opt_layer.slt .opt_scr_wrap .frm_area .select_box.on .list_wrap .opt_list li{border-width:0 0 1px 0}
+.bt_opt_layer.slt .opt_scr_wrap .frm_area .select_box.on .swiper-scrollbar{display:block}
+.bt_opt_layer.slt .opt_scr_wrap .limit_txt~.frm_area .select_box.on .list_wrap{height:223px}
+.bt_opt_layer.slt .btn_wrap,.bt_opt_layer.slt .prd_sum,.bt_opt_layer.slt .slt_list{display:none}
+
+/* 싱글 반응형 */
+@media screen and (max-width: 600px) {
   html,body,#content{overflow:scroll}
-  .con_box{width:100%;height:auto;overflow:visible}
+  .con_box{width:100%;height:auto}
   #buy_section{left:0}
-  .con_box.l_con{height:auto;margin-top:45px}
-  .con_box.r_con{height:auto;margin-top:0;margin-bottom:66px}
+  #buy_section .btn_bt_opt{border-left:0}
+  .con_box.l_con{height: calc(100% - 111px);margin-top:45px;margin-bottom: 66px;}
+  .con_box.r_con{height:auto;margin-top:0;margin-bottom:66px;border-left:0}
+  .con_box.r_con{display: none}
+
+}
+/* 듀얼 반응형 */
+@media screen and (min-width: 600px) {
+  .con_box.r_con{display: block;background-color:#fff}
+  .con_box.l_con .deal_tab .review,.con_box.l_con .deal_tab .qna{display:none}
+  .bt_opt_layer{border-left: 1px solid #ddd;}
+  
+
 }
